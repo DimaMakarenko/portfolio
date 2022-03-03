@@ -19,11 +19,9 @@ module.exports = {
   },
   env: {
     'jest/globals': true,
-    'cypress/globals': true,
   },
   plugins: ['jest', 'testing-library', 'import'],
   extends: [
-    'plugin:storybook/recommended', // Uses the recommended rules from eslint-plugin-storybook
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from @typescript-eslint/eslint-plugin
     'plugin:import/errors', // Uses the recommended rules from eslint-plugin-import
     'plugin:import/warnings', // Uses the recommended rules from eslint-plugin-import
@@ -35,7 +33,6 @@ module.exports = {
     'plugin:jest/style', // Uses the recommended style rules from eslint-plugin-jest
     'plugin:jest-dom/recommended', // Uses the recommended rules from eslint-plugin-jest-dom
     'plugin:testing-library/react', // Uses the recommended style rules from eslint-plugin-testing-library for React
-    'plugin:cypress/recommended', // Uses the recommended style rules from eslint-plugin-cypress
     'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
@@ -87,14 +84,4 @@ module.exports = {
       },
     ], // styled-components enforce macro imports
   },
-  overrides: [
-    {
-      files: ['cypress/*/*.spec.ts'],
-      rules: {
-        'testing-library/await-async-query': 'off',
-        'testing-library/prefer-screen-queries': 'off',
-        'testing-library/await-async-utils': 'off',
-      },
-    }, // disable jest and testing-library rules for cypress
-  ],
 };
