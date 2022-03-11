@@ -1,17 +1,18 @@
 import { createGlobalStyle } from 'styled-components/macro';
 import { reset } from 'styled-reset';
 
-import { variables } from './variables';
+import { ThemeType } from './theme';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${reset}
-  ${variables}
 
   * {
     box-sizing: border-box;
   }
   body {
-    background-color: var(--navy);
-    color: var(--slate);
+    background-color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.slate};
+    font-size: 20px;
+    line-height: 25px;
   }
 `;

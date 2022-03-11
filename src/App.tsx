@@ -1,14 +1,7 @@
 import { ReactElement } from 'react';
-import { ThemeProvider } from 'styled-components/macro';
 
-import { Main } from 'pages';
-import { GlobalStyle, theme } from 'styles';
+import { Hero } from 'sections';
 
 export function App(): ReactElement {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Main />
-    </ThemeProvider>
-  );
+  return <Hero />;
 }
