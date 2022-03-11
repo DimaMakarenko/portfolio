@@ -1,25 +1,26 @@
 import styled from 'styled-components/macro';
 
-import { Layout } from 'components/Layout';
+import { Typography } from 'components';
+import { theme } from 'styles';
 
-const HeronW = styled.div`
+const HeronW = styled.section`
   min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
-
-const Title = styled.h2``;
-const Name = styled.h1``;
-const Description = styled.p``;
 
 export function Hero() {
   return (
-    <Layout>
-      <HeronW>
-        <Title>Hi, my name is</Title>
-        <Name>Dima Makarenko.</Name>
-        <Description>
-          I&apos;m a front-end developer specializing in building SPA applications with React.js
-        </Description>
-      </HeronW>
-    </Layout>
+    <HeronW>
+      <Typography variant="h4">Hi, my name is</Typography>
+      <Typography variant="h1" color={theme.colors.lightestSlate}>
+        Dima Makarenko
+      </Typography>
+      <Typography variant="h4">
+        I&apos;m a front-end developer specializing in building SPA applications with React.js.
+      </Typography>
+    </HeronW>
   );
 }
