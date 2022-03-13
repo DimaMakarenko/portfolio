@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro';
 
-import { Typography } from 'components';
+import { Link, Typography } from 'components';
+import { config } from 'config';
 import { theme } from 'styles';
 
 const HeronW = styled.section`
@@ -18,9 +19,13 @@ export function Hero() {
       <Typography variant="h1" color={theme.colors.lightestSlate}>
         Dima Makarenko
       </Typography>
-      <Typography variant="h4">
-        I&apos;m a front-end developer specializing in building SPA applications with React.js.
+      <Typography>
+        I&apos;m a front-end developer specializing in building SPA applications with{' '}
+        <Link href="https://reactjs.org/">React.js</Link>.
       </Typography>
+      <Link href={`mailto:${config.email}`} variant="button">
+        Say Hi
+      </Link>
     </HeronW>
   );
 }
