@@ -13,11 +13,13 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
 }
 
+const LinkElement = styled.a``;
+
 const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
   cursor: pointer;
   position: relative;
 
-  a {
+  ${LinkElement} {
     color: ${({ theme }) => theme.colors.green};
     display: inline-block;
     text-decoration: none;
@@ -28,7 +30,7 @@ const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
     switch (variant) {
       case 'link':
         return css`
-          a {
+          ${LinkElement} {
             &:after {
               content: '';
               display: block;
@@ -65,7 +67,7 @@ const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
 export function Link({ variant = 'link', children, ...otherProps }: LinkProps) {
   return (
     <LinkW variant={variant}>
-      <a {...otherProps}>{children}</a>
+      <LinkElement {...otherProps}>{children}</LinkElement>
     </LinkW>
   );
 }
