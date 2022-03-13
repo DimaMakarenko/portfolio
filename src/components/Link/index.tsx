@@ -15,7 +15,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const LinkElement = styled.a``;
 
-const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
+export const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
   cursor: pointer;
   position: relative;
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import { Link, Typography } from 'components';
+import { Link, LinkW, Typography } from 'components';
 import { config } from 'config';
 import { theme } from 'styles';
 
@@ -10,6 +10,14 @@ const HeronW = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const HiLink = styled.div`
+  margin-top: 20px;
+
+  ${LinkW} {
+    display: block;
+  }
 `;
 
 export function Hero() {
@@ -23,9 +31,11 @@ export function Hero() {
         I&apos;m a front-end developer specializing in building SPA applications with{' '}
         <Link href={config.links.react}>React.js</Link>.
       </Typography>
-      <Link href={`mailto:${config.email}`} variant="button">
-        Say Hi
-      </Link>
+      <HiLink>
+        <Link href={`mailto:${config.email}`} variant="button">
+          Say Hello
+        </Link>
+      </HiLink>
     </HeronW>
   );
 }
