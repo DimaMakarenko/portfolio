@@ -24,7 +24,7 @@ const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>
         return css`
           font-size: 80px;
           line-height: 88px;
-          font-weight: 600px;
+          font-weight: 600;
         `;
       case 'h2':
         return css`
