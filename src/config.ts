@@ -3,4 +3,10 @@ export const config = {
   links: {
     react: 'https://reactjs.org',
   },
+  socials: {
+    github: 'https://github.com/DimaMakarenko',
+    telegram: 'https://t.me/datascienceboy',
+    linkedIn: 'https://www.linkedin.com/in/dm-makarenko',
+    gmail: 'mailto:makarenko.d.viri@gmail.com',
+  },
 };

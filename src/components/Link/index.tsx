@@ -40,7 +40,7 @@ const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
               bottom: 0px;
               left: 0px;
               background-color: ${({ theme }) => theme.colors.green};
-              transition: ${({ theme }) => theme.transactions};
+              transition: ${({ theme }) => theme.transition};
               opacity: 0.5;
             }
             &:hover {

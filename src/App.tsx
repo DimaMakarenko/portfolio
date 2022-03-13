@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
+import { SocialSide } from 'components';
 import { Hero, About } from 'sections';
 
 const Main = styled.main`
@@ -10,6 +11,7 @@ const Main = styled.main`
 export function App(): ReactElement {
   return (
     <Main>
+      <SocialSide />
       <Hero />
       <About />
     </Main>
