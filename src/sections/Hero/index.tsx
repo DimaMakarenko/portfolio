@@ -21,7 +21,7 @@ export function Hero() {
       </Typography>
       <Typography>
         I&apos;m a front-end developer specializing in building SPA applications with{' '}
-        <Link href="https://reactjs.org/">React.js</Link>.
+        <Link href={config.links.react}>React.js</Link>.
       </Typography>
       <Link href={`mailto:${config.email}`} variant="button">
         Say Hi
