@@ -1,14 +1,19 @@
 import { ReactElement } from 'react';
-import { ThemeProvider } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
-import { Main } from 'pages';
-import { GlobalStyle, theme } from 'styles';
+import { SocialSide } from 'components';
+import { Hero, About } from 'sections';
+
+const Main = styled.main`
+  padding: 0px 150px;
+`;
 
 export function App(): ReactElement {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Main />
-    </ThemeProvider>
+    <Main>
+      <SocialSide />
+      <Hero />
+      {/* <About /> */}
+    </Main>
   );
 }
