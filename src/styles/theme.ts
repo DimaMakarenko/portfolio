@@ -1,7 +1,8 @@
 export const theme = {
   colors: {
     navy: '#0a192f',
-    lightNavy: '#64ffda',
+    lightNavy: '#112240',
+    lightestNavy: '#233554',
     slate: '#8892b0',
     lightestSlate: '#ccd6f6',
     green: '#64ffda',
@@ -11,6 +12,9 @@ export const theme = {
   borderRadius: '4px',
   zIndex: {
     side: 10,
+  },
+  tabs: {
+    height: 42,
   },
 };
 

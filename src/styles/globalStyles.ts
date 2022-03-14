@@ -18,4 +18,9 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   section {
     padding: 100px 0;
   }
+  button {
+    border: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+  }
 `;
