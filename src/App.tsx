@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
 import { SocialSide } from 'components';
-import { Hero, About } from 'sections';
+import { Hero, About, Experience } from 'sections';
 
 const Main = styled.main`
   padding: 0px 150px;
@@ -14,6 +14,7 @@ export function App(): ReactElement {
       <SocialSide />
       <Hero />
       <About />
+      <Experience />
     </Main>
   );
 }

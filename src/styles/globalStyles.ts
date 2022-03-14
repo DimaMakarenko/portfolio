@@ -15,4 +15,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-size: 20px;
     line-height: 25px;
   }
+  section {
+    padding: 100px 0;
+  }
 `;
