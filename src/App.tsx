@@ -13,7 +13,7 @@ export function App(): ReactElement {
     <Main>
       <SocialSide />
       <Hero />
-      {/* <About /> */}
+      <About />
     </Main>
   );
 }

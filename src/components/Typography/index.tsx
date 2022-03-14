@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components/macro';
 enum TypographyVariantTag {
   'h1' = 'h1',
   'h2' = 'h2',
-  'h4' = 'h4',
+  'sub-title' = 'sub-title',
 }
 
 export type TypographyVariant = keyof typeof TypographyVariantTag;
@@ -17,6 +17,7 @@ export interface TypographyProps {
 
 const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>>`
   display: block;
+  margin: 10px 0;
 
   ${({ variant }) => {
     switch (variant) {
@@ -28,13 +29,26 @@ const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>
         `;
       case 'h2':
         return css`
-          font-size: 68px;
-          line-height: 72px;
+          font-size: 55px;
+          line-height: 59px;
         `;
-      case 'h4':
+      case 'sub-title':
         return css`
-          font-size: 30px;
-          line-height: 34px;
+          font-size: 20px;
+          line-height: 24px;
+          position: relative;
+          padding-bottom: 10px;
+          margin: 20px 0 25px;
+
+          &:before {
+            content: '';
+            width: 100px;
+            height: 2px;
+            position: absolute;
+            background-color: ${({ theme }) => theme.colors.green};
+            left: 0px;
+            bottom: 0px;
+          }
         `;
     }
   }}
