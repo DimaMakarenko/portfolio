@@ -1,7 +1,6 @@
 import styled from 'styled-components/macro';
 
-import { Typography } from 'components';
-import { Link, LinkW } from 'components/Link';
+import { Typography, Link, LinkW } from 'components';
 import { config } from 'config';
 import { theme } from 'styles';
 

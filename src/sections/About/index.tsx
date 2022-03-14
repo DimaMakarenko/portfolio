@@ -1,12 +1,14 @@
 import { ReactElement } from 'react';
 
-import { CounterHeading, Typography } from 'components';
+import { CounterHeading, Typography, List } from 'components';
+import { technologies } from 'constants/index';
 
 export const About = (): ReactElement => {
   return (
-    <div>
+    <section>
       <CounterHeading count={1}>About</CounterHeading>
       <Typography>Hi! My name is Dima.</Typography>
-    </div>
+      <List data={technologies} columns={2} />
+    </section>
   );
 };
