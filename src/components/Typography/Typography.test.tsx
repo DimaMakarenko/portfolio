@@ -1,26 +1,45 @@
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components/macro';
 
-import { Typography } from '.';
+import { theme } from 'styles';
+
+import { Typography, TypographyProps } from '.';
 
 const text = 'test text';
 
+interface SetupTestProps {
+  variant?: TypographyProps['variant'];
+  color?: TypographyProps['color'];
+}
+
+const setupTest = ({ variant, color }: SetupTestProps = {}) => {
+  render(
+    <ThemeProvider theme={theme}>
+      <Typography variant={variant} color={color}>
+        {text}
+      </Typography>
+      )
+    </ThemeProvider>,
+  );
+};
+
 describe('<Typography />', () => {
   test('should correct render h1 styles', () => {
-    render(<Typography variant="h1">{text}</Typography>);
+    setupTest({ variant: 'h1' });
     expect(screen.getByText(text)).toHaveStyle(
       'font-size: 80px; line-height: 88px; font-weight: 600;',
     );
   });
   test('should correct render h2 styles', () => {
-    render(<Typography variant="h2">{text}</Typography>);
-    expect(screen.getByText(text)).toHaveStyle('font-size: 68px; line-height: 72px;');
+    setupTest({ variant: 'h2' });
+    expect(screen.getByText(text)).toHaveStyle('font-size: 55px; line-height: 59px;');
   });
-  test('should correct render h4 styles', () => {
-    render(<Typography variant="h4">{text}</Typography>);
-    expect(screen.getByText(text)).toHaveStyle('font-size: 30px; line-height: 34px;');
+  test('should correct render sub-title styles', () => {
+    setupTest({ variant: 'sub-title' });
+    expect(screen.getByText(text)).toHaveStyle('font-size: 20px; line-height: 24px;');
   });
   test('should correct render color', () => {
-    render(<Typography color="#123456">{text}</Typography>);
+    setupTest({ color: '#123456' });
     expect(screen.getByText(text)).toHaveStyle('color: #123456;');
   });
 });

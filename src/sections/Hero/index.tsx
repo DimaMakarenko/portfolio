@@ -23,7 +23,7 @@ const HiLink = styled.div`
 export function Hero() {
   return (
     <HeronW>
-      <Typography variant="h4">Hi, my name is</Typography>
+      <Typography variant="h2">Hi, my name is</Typography>
       <Typography variant="h1" color={theme.colors.lightestSlate}>
         Dima Makarenko
       </Typography>
