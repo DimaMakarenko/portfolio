@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 
 import { CounterHeading, Typography, List } from 'components';
-import { technologies } from 'constants/index';
+import { technologies } from 'content';
 import { theme } from 'styles';
 
 export const About = (): ReactElement => {

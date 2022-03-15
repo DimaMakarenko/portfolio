@@ -15,4 +15,12 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-size: 20px;
     line-height: 25px;
   }
+  section {
+    padding: 100px 0;
+  }
+  button {
+    border: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+  }
 `;

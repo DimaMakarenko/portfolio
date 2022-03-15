@@ -4,3 +4,5 @@ export * from './Side';
 export * from './SocialSide';
 export * from './List';
 export * from './Link';
+export * from './TabList';
+export * from './JobExperience';
