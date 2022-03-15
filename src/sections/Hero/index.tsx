@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import { Typography, Link, LinkW } from 'components';
+import { Typography, Link } from 'components';
 import { config } from 'config';
 import { theme } from 'styles';
 
@@ -14,10 +14,6 @@ const HeronW = styled.section`
 
 const HiLink = styled.div`
   margin-top: 20px;
-
-  ${LinkW} {
-    display: block;
-  }
 `;
 
 export function Hero() {

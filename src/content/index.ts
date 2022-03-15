@@ -1,4 +1,6 @@
-import { Jobs, Technologies } from 'types';
+import { Icons } from 'assets/icons';
+import { config } from 'config';
+import { Jobs, Projects, Technologies } from 'types';
 
 export const technologies = [
   'JavaScript (ES6+)',
@@ -77,4 +79,28 @@ export const jobs: Jobs = [
     projectTeamSize: '1 person',
     description: 'Create landing pages with animation from layout',
   },
+];
+
+export const projects: Projects = [
+  {
+    title: 'title',
+    description: 'qr',
+    technologies: [Technologies.TypeScript],
+    url: 'https://google.com',
+    sourceUrl: 'https://google.com',
+  },
+  {
+    title: 'title',
+    description: 'qr',
+    technologies: [Technologies.TypeScript, Technologies.TypeScript, Technologies.TypeScript],
+    url: 'https://google.com',
+    sourceUrl: 'https://google.com',
+  },
+];
+
+export const socialLinks: { url: string; iconName: Icons }[] = [
+  { url: config.socials.github, iconName: 'github' },
+  { url: config.socials.telegram, iconName: 'telegram' },
+  { url: config.socials.linkedIn, iconName: 'linkedin' },
+  { url: config.socials.gmail, iconName: 'gmail' },
 ];

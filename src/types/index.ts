@@ -45,3 +45,13 @@ export type Job = {
 };
 
 export type Jobs = Job[];
+
+export type Project = {
+  title: string;
+  description: string;
+  url?: string;
+  sourceUrl?: string;
+  technologies: Technologies[];
+};
+
+export type Projects = Project[];

@@ -1,52 +1,50 @@
 import { AnchorHTMLAttributes, HTMLProps, ReactNode } from 'react';
 import styled, { css } from 'styled-components/macro';
 
+import { icons, Icons } from 'assets/icons';
+
 enum LinkVariantTag {
   'link' = 'link',
   'button' = 'button',
+  'icon' = 'icon',
 }
 
 export type LinkVariant = keyof typeof LinkVariantTag;
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: LinkVariant;
-  children: ReactNode;
+  children?: ReactNode;
+  iconName?: Icons;
 }
 
-const LinkElement = styled.a``;
-
-export const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
+export const LinkElement = styled.a<{ variant?: LinkVariant }>`
   cursor: pointer;
   position: relative;
 
-  ${LinkElement} {
-    color: ${({ theme }) => theme.colors.green};
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-  }
+  color: ${({ theme }) => theme.colors.green};
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
 
   ${({ variant }) => {
     switch (variant) {
       case 'link':
         return css`
-          ${LinkElement} {
+          &:after {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 2px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-color: ${({ theme }) => theme.colors.green};
+            transition: ${({ theme }) => theme.transition};
+            opacity: 0.5;
+          }
+          &:hover {
             &:after {
-              content: '';
-              display: block;
-              width: 0px;
-              height: 2px;
-              position: absolute;
-              bottom: 0px;
-              left: 0px;
-              background-color: ${({ theme }) => theme.colors.green};
-              transition: ${({ theme }) => theme.transition};
-              opacity: 0.5;
-            }
-            &:hover {
-              &:after {
-                width: 100%;
-              }
+              width: 100%;
             }
           }
         `;
@@ -60,14 +58,37 @@ export const LinkW = styled.span<Pick<LinkProps, 'variant'>>`
             background-color: ${({ theme }) => theme.colors.greenTint};
           }
         `;
+      case 'icon':
+        return css`
+          display: inline-block;
+          line-height: 0px;
+
+          padding: 10px;
+          transition: ${({ theme }) => theme.transition};
+
+          svg {
+            stroke: ${({ theme }) => theme.colors.lightestSlate};
+            width: 20px;
+            height: 20px;
+            display: block;
+          }
+          &:hover,
+          &:focus {
+            transform: translateY(-3px);
+            svg {
+              stroke: ${({ theme }) => theme.colors.green};
+            }
+          }
+        `;
     }
   }};
 `;
 
-export function Link({ variant = 'link', children, ...otherProps }: LinkProps) {
+export function Link({ variant = 'link', iconName, children, ...otherProps }: LinkProps) {
   return (
-    <LinkW variant={variant}>
-      <LinkElement {...otherProps}>{children}</LinkElement>
-    </LinkW>
+    <LinkElement {...otherProps} variant={iconName ? 'icon' : variant}>
+      {children}
+      {iconName && icons[iconName]}
+    </LinkElement>
   );
 }
