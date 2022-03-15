@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react';
 import styled from 'styled-components/macro';
 
 interface TabListProps {
-  tabs: string[];
+  tabs: { title: string; value: string | ReactElement }[];
 }
 
 const Tab = styled.button<{ isActive: boolean }>`
@@ -22,6 +22,8 @@ const Tab = styled.button<{ isActive: boolean }>`
   text-transform: capitalize;
   border-left: 2px solid ${({ theme }) => theme.colors.lightestNavy};
   font-weight: 500;
+  white-space: nowrap;
+  font-size: 15px;
 
   &:hover,
   &:focus {
@@ -47,19 +49,31 @@ const Tabs = styled.div`
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  width: max-content;
+`;
+
+const TabListW = styled.div`
+  display: flex;
+`;
+
+const TabValue = styled.div`
+  margin-left: 30px;
 `;
 
 export function TabList({ tabs }: TabListProps): ReactElement {
   const [activeTabId, setActiveTabId] = useState<number>(0);
 
   return (
-    <Tabs>
-      {tabs.map((item, index) => (
-        <Tab key={index} isActive={activeTabId === index} onClick={() => setActiveTabId(index)}>
-          <span>{item}</span>
-        </Tab>
-      ))}
-      <Highlight activeTabId={activeTabId} />
-    </Tabs>
+    <TabListW>
+      <Tabs>
+        {tabs.map((item, index) => (
+          <Tab key={index} isActive={activeTabId === index} onClick={() => setActiveTabId(index)}>
+            <span>{item.title}</span>
+          </Tab>
+        ))}
+        <Highlight activeTabId={activeTabId} />
+      </Tabs>
+      <TabValue>{tabs[activeTabId].value}</TabValue>
+    </TabListW>
   );
 }

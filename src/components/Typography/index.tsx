@@ -17,7 +17,6 @@ export interface TypographyProps {
 
 const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>>`
   display: block;
-  margin: 10px 0;
 
   ${({ variant }) => {
     switch (variant) {
