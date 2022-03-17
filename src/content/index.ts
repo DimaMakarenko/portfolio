@@ -83,18 +83,18 @@ export const jobs: Jobs = [
 
 export const projects: Projects = [
   {
-    title: 'title',
-    description: 'qr',
-    technologies: [Technologies.TypeScript],
-    url: 'https://google.com',
-    sourceUrl: 'https://google.com',
+    title: 'Task-tracker',
+    description:
+      'Application with accounts for creating tasks and tracking time statistics by day. Also have been implemented login and account settings pages. Firebase was used to store information.',
+    technologies: [Technologies.TypeScript, Technologies.ReactNative, Technologies.Firebase],
+    sourceUrl: 'https://github.com/DimaMakarenko/task-tracker',
   },
   {
-    title: 'title',
-    description: 'qr',
+    title: 'Luis-landing-page',
+    description: 'Layout training project',
     technologies: [Technologies.TypeScript, Technologies.TypeScript, Technologies.TypeScript],
-    url: 'https://google.com',
-    sourceUrl: 'https://google.com',
+    url: 'https://dimamakarenko.github.io/Luis-landing-page/',
+    sourceUrl: 'https://github.com/DimaMakarenko/Luis-landing-page',
   },
 ];
 

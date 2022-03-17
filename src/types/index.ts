@@ -26,6 +26,7 @@ export enum Technologies {
   Webpack = 'Webpack',
   AndroidStudio = 'Android Studio',
   Xcode = 'Xcode',
+  Firebase = 'Firebase',
 }
 
 type Period = {
@@ -48,7 +49,7 @@ export type Jobs = Job[];
 
 export type Project = {
   title: string;
-  description: string;
+  description?: string;
   url?: string;
   sourceUrl?: string;
   technologies: Technologies[];
