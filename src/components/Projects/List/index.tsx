@@ -8,8 +8,8 @@ import { ProjectCard } from '../Card';
 const ProjectListW = styled.ul`
   margin: 50px 0px 0px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
 `;
 
 interface ProjectList {

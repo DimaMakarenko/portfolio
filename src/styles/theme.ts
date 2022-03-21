@@ -16,6 +16,9 @@ export const theme = {
   tabs: {
     height: 42,
   },
+  sizes: {
+    maxWidth: 1500,
+  },
 };
 
 export type ThemeType = typeof theme;
