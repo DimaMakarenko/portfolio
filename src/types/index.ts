@@ -27,6 +27,8 @@ export enum Technologies {
   AndroidStudio = 'Android Studio',
   Xcode = 'Xcode',
   Firebase = 'Firebase',
+  Php = 'PHP',
+  Yii2 = 'Yii 2',
 }
 
 type Period = {

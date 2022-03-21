@@ -90,11 +90,66 @@ export const projects: Projects = [
     sourceUrl: 'https://github.com/DimaMakarenko/task-tracker',
   },
   {
-    title: 'Luis-landing-page',
+    title: 'Luis Landing Page',
     description: 'Layout training project',
-    technologies: [Technologies.TypeScript, Technologies.TypeScript, Technologies.TypeScript],
+    technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
     url: 'https://dimamakarenko.github.io/Luis-landing-page/',
     sourceUrl: 'https://github.com/DimaMakarenko/Luis-landing-page',
+  },
+  {
+    title: 'Go Surf',
+    description: 'Layout training project',
+    technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
+    url: 'https://dimamakarenko.github.io/go-surf/',
+    sourceUrl: 'https://github.com/DimaMakarenko/go-surf',
+  },
+  {
+    title: 'Element Landing Page',
+    description: 'Layout training project',
+    technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
+    url: 'https://github.com/DimaMakarenko/Element-Landing-Page',
+    sourceUrl: 'https://dimamakarenko.github.io/Element-Landing-Page/',
+  },
+  {
+    title: 'Agnecy Landing Page',
+    description: 'Layout training project',
+    technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
+    url: 'https://github.com/DimaMakarenko/Agnecy-landing-Page',
+    sourceUrl: 'https://dimamakarenko.github.io/Agnecy-landing-Page',
+  },
+  {
+    title: 'Geriana Landing Page',
+    description: 'Layout training project',
+    technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
+    url: 'https://dimamakarenko.github.io/Geriana-Landing-Gulp/',
+    sourceUrl: 'https://github.com/DimaMakarenko/Geriana-Landing-Gulp',
+  },
+  {
+    title: 'Lopper Landing Page',
+    description: 'Layout training project',
+    technologies: [Technologies.JavaScript, Technologies.Css],
+    url: 'https://dimamakarenko.github.io/Lopper/',
+    sourceUrl: 'https://github.com/DimaMakarenko/Lopper',
+  },
+  {
+    title: 'Top Gear',
+    description:
+      'Blog about cars and everything related to them. W the ability to create, delete, edit articles. It also implemented the creation of an account for visitors, the ability to like and write comments. Written in a framework Yii 2 for PHP.',
+    technologies: [
+      Technologies.JavaScript,
+      Technologies.HTML,
+      Technologies.Php,
+      Technologies.Yii2,
+      Technologies.Css,
+    ],
+    sourceUrl: 'https://github.com/DimaMakarenko/topgear',
+  },
+  {
+    title: 'Undercover Landing Page',
+    description: 'Layout training project',
+    technologies: [Technologies.HTML, Technologies.Css],
+    url: 'https://dimamakarenko.github.io/design/',
+    sourceUrl: 'https://github.com/DimaMakarenko/design',
   },
 ];
 
