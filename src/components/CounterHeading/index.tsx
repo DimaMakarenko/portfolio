@@ -20,8 +20,9 @@ const CounterHeadingElement = styled.h2<Pick<CounterHeadingProps, 'count'>>`
     margin-right: 10px;
     color: ${({ theme }) => theme.colors.green};
     font-weight: 400;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 24px;
+    font-family: 'Inconsolata', monospace;
   }
   &:after {
     content: '';

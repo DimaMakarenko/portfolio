@@ -42,7 +42,6 @@ const ProjectCardW = styled.li`
     ${Folder} {
       svg {
         stroke: ${({ theme }) => theme.colors.green};
-        transform: scale(1.1);
         transition: ${({ theme }) => theme.transition};
       }
     }

@@ -29,6 +29,7 @@ const Link = styled.a<{ count: number }>`
     position: relative;
     margin-right: 5px;
     color: ${({ theme }) => theme.colors.green};
+    font-family: 'Inconsolata', monospace;
   }
 `;
 
