@@ -105,7 +105,7 @@ export function ProjectCard({
         {description && <Description>{description}</Description>}
       </div>
 
-      <Technologies>
+      <Technologies className="code">
         {technologies.map((technology, index) => (
           <TechnologyItem key={index}>{technology}</TechnologyItem>
         ))}

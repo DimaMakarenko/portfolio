@@ -9,13 +9,14 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-
+    
   }
   body {
     background-color: ${({ theme }) => theme.colors.navy};
     color: ${({ theme }) => theme.colors.slate};
     font-size: 20px;
     line-height: 25px;
+    font-family: 'Poppins', sans-serif;
   }
   section {
     padding: 100px 0;
@@ -27,5 +28,9 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
   a {
     text-decoration: none ;
+  }
+  
+  .code {
+    font-family: 'Inconsolata', monospace;
   }
 `;

@@ -21,6 +21,7 @@ const Tab = styled.button<{ isActive: boolean }>`
   font-weight: 500;
   white-space: nowrap;
   font-size: 15px;
+  font-family: inherit;
 
   &:hover,
   &:focus {
