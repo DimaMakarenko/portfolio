@@ -23,8 +23,6 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
 
   color: ${({ theme }) => theme.colors.green};
   display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
 
   ${({ variant }) => {
     switch (variant) {

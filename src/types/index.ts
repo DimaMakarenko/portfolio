@@ -1,3 +1,5 @@
+import { Icons } from 'assets/icons';
+
 export enum Technologies {
   // Front-end skills
   React = 'React',
@@ -31,6 +33,12 @@ export enum Technologies {
   Yii2 = 'Yii 2',
 }
 
+export enum NavLinkNames {
+  About = 'about',
+  Experience = 'experience',
+  Projects = 'projects',
+}
+
 type Period = {
   start: string;
   end: string;
@@ -58,3 +66,10 @@ export type Project = {
 };
 
 export type Projects = Project[];
+
+export type SocialLink = {
+  url: string;
+  iconName: Icons;
+};
+
+export type NavLink = { title: string; url: string; id: NavLinkNames };

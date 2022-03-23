@@ -12,6 +12,7 @@ export const theme = {
   borderRadius: '4px',
   zIndex: {
     side: 10,
+    header: 11,
   },
   tabs: {
     height: 42,

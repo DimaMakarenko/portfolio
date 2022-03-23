@@ -3,10 +3,11 @@ import { ReactElement } from 'react';
 import { CounterHeading, Typography, List } from 'components';
 import { technologies } from 'content';
 import { theme } from 'styles';
+import { NavLinkNames } from 'types';
 
 export const About = (): ReactElement => {
   return (
-    <section>
+    <section id={NavLinkNames.About}>
       <CounterHeading count={1}>About</CounterHeading>
       <Typography>Hi! My name is Dima.</Typography>
       <Typography>Here are a few technologies I&apos;ve been working with recently:</Typography>

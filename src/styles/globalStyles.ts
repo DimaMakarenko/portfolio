@@ -8,6 +8,8 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
   }
   body {
     background-color: ${({ theme }) => theme.colors.navy};
@@ -22,5 +24,8 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border: 0px;
     border-radius: 0px;
     cursor: pointer;
+  }
+  a {
+    text-decoration: none ;
   }
 `;

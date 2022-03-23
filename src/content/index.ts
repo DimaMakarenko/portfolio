@@ -1,6 +1,6 @@
 import { Icons } from 'assets/icons';
 import { config } from 'config';
-import { Jobs, Projects, Technologies } from 'types';
+import { Jobs, NavLink, NavLinkNames, Projects, SocialLink, Technologies } from 'types';
 
 export const technologies = [
   'JavaScript (ES6+)',
@@ -153,9 +153,15 @@ export const projects: Projects = [
   },
 ];
 
-export const socialLinks: { url: string; iconName: Icons }[] = [
+export const socialLinks: SocialLink[] = [
   { url: config.socials.github, iconName: 'github' },
   { url: config.socials.telegram, iconName: 'telegram' },
   { url: config.socials.linkedIn, iconName: 'linkedin' },
   { url: config.socials.gmail, iconName: 'gmail' },
+];
+
+export const navLinks: NavLink[] = [
+  { title: 'About', url: `/#${NavLinkNames.About}`, id: NavLinkNames.About },
+  { title: 'Experience', url: `/#${NavLinkNames.Experience}`, id: NavLinkNames.Experience },
+  { title: 'Projects', url: `/#${NavLinkNames.Projects}`, id: NavLinkNames.Projects },
 ];
