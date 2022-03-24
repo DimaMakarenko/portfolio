@@ -1,3 +1,5 @@
+import { Icons } from 'assets/icons';
+
 export enum Technologies {
   // Front-end skills
   React = 'React',
@@ -26,6 +28,15 @@ export enum Technologies {
   Webpack = 'Webpack',
   AndroidStudio = 'Android Studio',
   Xcode = 'Xcode',
+  Firebase = 'Firebase',
+  Php = 'PHP',
+  Yii2 = 'Yii 2',
+}
+
+export enum NavLinkNames {
+  About = 'about',
+  Experience = 'experience',
+  Projects = 'projects',
 }
 
 type Period = {
@@ -45,3 +56,20 @@ export type Job = {
 };
 
 export type Jobs = Job[];
+
+export type Project = {
+  title: string;
+  description?: string;
+  url?: string;
+  sourceUrl?: string;
+  technologies: Technologies[];
+};
+
+export type Projects = Project[];
+
+export type SocialLink = {
+  url: string;
+  iconName: Icons;
+};
+
+export type NavLink = { title: string; url: string; id: NavLinkNames };

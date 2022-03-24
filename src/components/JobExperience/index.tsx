@@ -19,18 +19,19 @@ const Period = styled.p`
 
 const Block = styled.div`
   display: flex;
-  font-size: 18px;
+  font-size: 17px;
   margin: 5px 0 14px;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 165px 1fr;
   gap: 5px 20px;
 `;
 
 const BlockHeader = styled.p`
-  font-weight: 600;
+  font-weight: 500;
   color: ${({ theme }) => theme.colors.lightestSlate};
   height: min-content;
   text-align: right;
+  white-space: nowrap;
 
   & > span {
     position: relative;
@@ -79,25 +80,25 @@ export function JobExperience({
         <BlockHeader>
           <span>Projects</span>
         </BlockHeader>
-        <span>{description}</span>
+        <span className="code">{description}</span>
       </Block>
       <Block>
         <BlockHeader>
           <span>Technologies</span>
         </BlockHeader>
-        <span>{listToCommaSeparated(technologies)}</span>
+        <span className="code">{listToCommaSeparated(technologies)}</span>
       </Block>
       <Block>
         <BlockHeader>
           <span>Responsibilities</span>
         </BlockHeader>
-        <span>{responsibilities}</span>
+        <span className="code">{responsibilities}</span>
       </Block>
       <Block>
         <BlockHeader>
           <span>Project Team Size</span>
         </BlockHeader>
-        <span>{projectTeamSize}</span>
+        <span className="code">{projectTeamSize}</span>
       </Block>
     </div>
   );

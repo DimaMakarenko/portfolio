@@ -27,7 +27,7 @@ const Li = styled.li`
 
 export const List = ({ data, columns }: ListProps): ReactElement => {
   return (
-    <Ul columns={columns}>
+    <Ul columns={columns} className="code">
       {data.map((item, index) => (
         <Li key={index}>{item}</Li>
       ))}

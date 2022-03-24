@@ -6,10 +6,7 @@ interface TabListProps {
 }
 
 const Tab = styled.button<{ isActive: boolean }>`
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
   background-color: transparent;
-  text-decoration: none;
   position: relative;
   transition: ${({ theme }) => theme.transition};
   display: flex;
@@ -24,6 +21,7 @@ const Tab = styled.button<{ isActive: boolean }>`
   font-weight: 500;
   white-space: nowrap;
   font-size: 15px;
+  font-family: inherit;
 
   &:hover,
   &:focus {
