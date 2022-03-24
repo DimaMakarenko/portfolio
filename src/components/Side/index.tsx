@@ -14,7 +14,7 @@ const SideElement = styled.div`
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: ${({ theme }) => theme.colors.lightestSlate};
+    background-color: ${({ theme }) => theme.colors.arapawa};
   }
 `;
 

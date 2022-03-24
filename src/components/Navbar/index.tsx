@@ -20,17 +20,9 @@ const MenuItem = styled.li`
   margin: 0px 5px;
 `;
 
-const Link = styled.a<{ count: number }>`
-  color: ${({ theme }) => theme.colors.lightestSlate};
+const Link = styled.a`
+  color: ${({ theme }) => theme.colors.arapawa};
   padding: 10px;
-
-  &:before {
-    content: '0${({ count }) => count}.';
-    position: relative;
-    margin-right: 5px;
-    color: ${({ theme }) => theme.colors.green};
-    font-family: 'Inconsolata', monospace;
-  }
 `;
 
 export function Navbar(): ReactElement {
@@ -39,9 +31,9 @@ export function Navbar(): ReactElement {
   return (
     <NavbarW>
       <Menu>
-        {navLinks.map(({ title, url, id }, index) => (
-          <MenuItem key={index}>
-            <Link href={url} onClick={() => handleScroll(id)} count={index + 1}>
+        {navLinks.map(({ title, url, id }) => (
+          <MenuItem key={id}>
+            <Link href={url} onClick={() => handleScroll(id)}>
               {title}
             </Link>
           </MenuItem>

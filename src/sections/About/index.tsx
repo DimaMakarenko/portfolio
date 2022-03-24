@@ -19,7 +19,7 @@ export const About = (): ReactElement => {
       <ListW>
         <List data={technologies} columns={3} />
       </ListW>
-      <Typography variant="sub-title" color={theme.colors.lightestSlate}>
+      <Typography variant="sub-title" color={theme.colors.arapawa}>
         Summary of Qualifications
       </Typography>
       <Typography>
@@ -29,7 +29,7 @@ export const About = (): ReactElement => {
         try to write good projects that are easy to understand and scale. I am professional and
         responsible for the work I do.
       </Typography>
-      <Typography variant="sub-title" color={theme.colors.lightestSlate}>
+      <Typography variant="sub-title" color={theme.colors.arapawa}>
         Additional Accomplishments
       </Typography>
       <Typography>

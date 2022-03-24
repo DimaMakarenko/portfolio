@@ -22,7 +22,7 @@ export function Contact(): ReactElement {
   return (
     <ContactW id={NavLinkNames.Contact}>
       <CounterHeading count={4}>Contact</CounterHeading>
-      <Typography variant="h2" color={theme.colors.lightestSlate}>
+      <Typography variant="h2" color={theme.colors.arapawa}>
         Keep in touch
       </Typography>
       <DescriptionW>

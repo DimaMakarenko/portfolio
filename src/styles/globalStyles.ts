@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     
   }
   body {
-    background-color: ${({ theme }) => theme.colors.navy};
+    background-color: ${({ theme }) => theme.colors.aqua};
     color: ${({ theme }) => theme.colors.slate};
     font-size: 20px;
     line-height: 25px;

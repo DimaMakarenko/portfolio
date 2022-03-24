@@ -5,7 +5,7 @@ import { icons } from 'assets/icons';
 import { config } from 'config';
 
 const FooterW = styled.footer`
-  color: ${({ theme }) => theme.colors.lightestSlate};
+  color: ${({ theme }) => theme.colors.arapawa};
   font-size: 14px;
   display: flex;
   flex-direction: column;
