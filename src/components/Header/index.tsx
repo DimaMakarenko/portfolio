@@ -4,9 +4,10 @@ import styled from 'styled-components/macro';
 import { icons } from 'assets/icons';
 import { Link, Navbar, LinkElement } from 'components';
 import { config } from 'config';
+import { useScrollDirection } from 'hooks';
 import { hexToRgb } from 'utils';
 
-const HeaderW = styled.header`
+const HeaderW = styled.header<{ isHide: boolean }>`
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -15,6 +16,8 @@ const HeaderW = styled.header`
   align-items: center;
   background-color: rgba(${({ theme }) => hexToRgb(theme.colors.navy)}, 0.9);
   z-index: ${({ theme }) => theme.zIndex.header};
+  transition: ${({ theme }) => theme.transition};
+  transform: translateY(${({ isHide }) => (isHide ? '-80px' : '0px')});
 `;
 
 const Menu = styled.div`
@@ -42,8 +45,10 @@ const Logo = styled.div`
 `;
 
 export function Header(): ReactElement {
+  const { direction } = useScrollDirection();
+
   return (
-    <HeaderW>
+    <HeaderW isHide={direction === 'down'}>
       <Logo>
         <Link variant="basic" href="/#">
           {icons.logo}
