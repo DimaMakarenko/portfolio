@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.28be3716.js",
+    "main.js": "/portfolio/static/js/main.9916ac87.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/logoLoader.svg": "/portfolio/static/media/logoLoader.e9da46919f3a39a60021a27e11fdd45f.svg",
-    "static/media/logo.svg": "/portfolio/static/media/logo.d93a14b62718b721b6e22fc2e52b5d95.svg",
+    "static/media/logo.svg": "/portfolio/static/media/logo.e13517cf4647ace6efbf875a74b54e77.svg",
     "index.html": "/portfolio/index.html",
     "static/media/gmail.svg": "/portfolio/static/media/gmail.bf2ef572e890654f0de41155c5d7c99c.svg",
     "static/media/github.svg": "/portfolio/static/media/github.d7af8a10662face7c9f6a6526c0451b2.svg",
-    "static/media/telegram.svg": "/portfolio/static/media/telegram.ae1a4ecebaf046053016ab57c544e435.svg",
+    "static/media/telegram.svg": "/portfolio/static/media/telegram.5155e37d0c5553c9c26256b0ed6af7eb.svg",
     "static/media/external.svg": "/portfolio/static/media/external.fe944e7bb7c151f63ecd85ec8cf00010.svg",
-    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.727eb5a6d58b633a3195fff210c06436.svg",
+    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.ffbf1acefbb94db27f85e9dcd617442e.svg",
+    "static/media/star.svg": "/portfolio/static/media/star.b2111f70cd87103c45d68c19ee3c2613.svg",
     "static/media/folder.svg": "/portfolio/static/media/folder.f4734aedb3edda948de7c60dc73fb822.svg",
-    "main.28be3716.js.map": "/portfolio/static/js/main.28be3716.js.map",
+    "main.9916ac87.js.map": "/portfolio/static/js/main.9916ac87.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.28be3716.js"
+    "static/js/main.9916ac87.js"
   ]
 }
