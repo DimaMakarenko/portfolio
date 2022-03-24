@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
 import { navLinks } from 'content';
-import { scrollToElementById } from 'hooks';
+import { useScrollToElementById } from 'hooks';
 
 const NavbarW = styled.nav`
   height: 80px;
@@ -34,7 +34,7 @@ const Link = styled.a<{ count: number }>`
 `;
 
 export function Navbar(): ReactElement {
-  const { handleScroll } = scrollToElementById();
+  const { handleScroll } = useScrollToElementById();
 
   return (
     <NavbarW>

@@ -1,1 +1,2 @@
-export * from './scrollToElementById';
+export * from './useScrollToElementById';
+export * from './useScrollDirection';

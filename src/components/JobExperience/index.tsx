@@ -14,7 +14,7 @@ const Title = styled.p`
 
 const Period = styled.p`
   font-size: 16px;
-  margin: 5px 0 10px;
+  margin: 5px 0 20px;
 `;
 
 const Block = styled.div`
