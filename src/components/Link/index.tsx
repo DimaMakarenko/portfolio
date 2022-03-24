@@ -7,6 +7,7 @@ enum LinkVariantTag {
   'link' = 'link',
   'button' = 'button',
   'icon' = 'icon',
+  'basic' = 'basic',
 }
 
 export type LinkVariant = keyof typeof LinkVariantTag;
@@ -78,6 +79,8 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
             }
           }
         `;
+      case 'basic':
+        return css``;
     }
   }};
 `;

@@ -15,6 +15,7 @@
     "@types/react-dom": "^17.0.12",
     "@types/styled-components": "^5.1.24",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "animejs": "^3.2.1",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -95,5 +96,8 @@
         "statements": 70
       }
     }
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.4"
   }
 }

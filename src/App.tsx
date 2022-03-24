@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { SocialSide, Header } from 'components';
+import { SocialSide, Header, IconLoader } from 'components';
 import { Hero, About, Experience, Projects } from 'sections';
 
 const Main = styled.main`
@@ -13,6 +13,7 @@ const Main = styled.main`
 export function App(): ReactElement {
   return (
     <div>
+      <IconLoader />
       <Header />
       <Main>
         <SocialSide />

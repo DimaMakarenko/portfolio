@@ -1,4 +1,3 @@
-import { Icons } from 'assets/icons';
 import { config } from 'config';
 import { Jobs, NavLink, NavLinkNames, Projects, SocialLink, Technologies } from 'types';
 

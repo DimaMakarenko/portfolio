@@ -9,3 +9,4 @@ export * from './JobExperience';
 export * from './Projects/List';
 export * from './Header';
 export * from './Navbar';
+export * from './IconLoader';
