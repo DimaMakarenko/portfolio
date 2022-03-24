@@ -1,5 +1,6 @@
 export const config = {
   docResume: 'https://drive.google.com/file/d/1E9JqcRfqiSovxP202AO9xnf1H5XH-7ZW/view?usp=sharing',
+  gitRepoAPI: 'https://api.github.com/repos/DimaMakarenko/portfolio',
   links: {
     react: 'https://reactjs.org',
   },

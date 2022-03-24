@@ -5,6 +5,7 @@ import { ReactComponent as Gmail } from './gmail.svg';
 import { ReactComponent as LinkedIn } from './linkedin.svg';
 import { ReactComponent as Logo } from './logo.svg';
 import { ReactComponent as LogoLoader } from './logoLoader.svg';
+import { ReactComponent as Star } from './star.svg';
 import { ReactComponent as Telegram } from './telegram.svg';
 
 export const icons = {
@@ -16,6 +17,7 @@ export const icons = {
   external: <External />,
   logo: <Logo />,
   logoLoader: <LogoLoader />,
+  star: <Star />,
 };
 
 export type Icons = keyof typeof icons;

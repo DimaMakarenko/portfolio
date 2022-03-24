@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { SocialSide, Header, IconLoader } from 'components';
+import { SocialSide, Header, IconLoader, Footer } from 'components';
 import { Hero, About, Experience, Projects, Contact } from 'sections';
 
 const Main = styled.main`
@@ -22,6 +22,7 @@ export function App(): ReactElement {
         <Experience />
         <Projects />
         <Contact />
+        <Footer />
       </Main>
     </div>
   );
