@@ -50,7 +50,7 @@ export function Header(): ReactElement {
   return (
     <HeaderW isHide={direction === 'down'}>
       <Logo>
-        <Link variant="basic" href="/#">
+        <Link variant="basic" href="/portfolio/#">
           {icons.logo}
         </Link>
       </Logo>

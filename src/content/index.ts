@@ -162,8 +162,12 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const navLinks: NavLink[] = [
-  { title: 'About', url: `/#${NavLinkNames.About}`, id: NavLinkNames.About },
-  { title: 'Experience', url: `/#${NavLinkNames.Experience}`, id: NavLinkNames.Experience },
-  { title: 'Projects', url: `/#${NavLinkNames.Projects}`, id: NavLinkNames.Projects },
-  { title: 'Contact', url: `/#${NavLinkNames.Contact}`, id: NavLinkNames.Contact },
+  { title: 'About', url: `/portfolio/#${NavLinkNames.About}`, id: NavLinkNames.About },
+  {
+    title: 'Experience',
+    url: `/portfolio/#${NavLinkNames.Experience}`,
+    id: NavLinkNames.Experience,
+  },
+  { title: 'Projects', url: `/portfolio/#${NavLinkNames.Projects}`, id: NavLinkNames.Projects },
+  { title: 'Contact', url: `/portfolio/#${NavLinkNames.Contact}`, id: NavLinkNames.Contact },
 ];
