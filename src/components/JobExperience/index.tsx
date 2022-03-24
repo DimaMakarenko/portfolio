@@ -73,7 +73,7 @@ export function JobExperience({
           </>
         )}
       </Title>
-      <Period>
+      <Period className="code">
         {period.start} - {period.end}
       </Period>
       <Block>

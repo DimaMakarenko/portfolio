@@ -2,14 +2,16 @@ import { config } from 'config';
 import { Jobs, NavLink, NavLinkNames, Projects, SocialLink, Technologies } from 'types';
 
 export const technologies = [
-  'JavaScript (ES6+)',
-  'TypeScript',
-  'HTML',
-  'CSS',
-  'React',
-  'Redux',
-  'React-Native',
-  'Apollo Graphql',
+  Technologies.JavaScript,
+  Technologies.TypeScript,
+  Technologies.HTML,
+  Technologies.Css,
+  Technologies.React,
+  Technologies.Redux,
+  Technologies.ReactNative,
+  Technologies.ReactHooks,
+  Technologies.Unit,
+  Technologies.ReactQuery,
 ];
 
 export const jobs: Jobs = [
@@ -163,4 +165,5 @@ export const navLinks: NavLink[] = [
   { title: 'About', url: `/#${NavLinkNames.About}`, id: NavLinkNames.About },
   { title: 'Experience', url: `/#${NavLinkNames.Experience}`, id: NavLinkNames.Experience },
   { title: 'Projects', url: `/#${NavLinkNames.Projects}`, id: NavLinkNames.Projects },
+  { title: 'Contact', url: `/#${NavLinkNames.Contact}`, id: NavLinkNames.Contact },
 ];

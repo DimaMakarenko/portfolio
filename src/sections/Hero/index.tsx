@@ -12,26 +12,23 @@ const HeronW = styled.section`
   justify-content: center;
 `;
 
-const HiLink = styled.div`
-  margin-top: 20px;
+const NameW = styled.div`
+  margin: 10px 0 15px;
 `;
 
 export function Hero() {
   return (
     <HeronW>
       <Typography variant="h2">Hi, my name is</Typography>
-      <Typography variant="h1" color={theme.colors.lightestSlate}>
-        Dima Makarenko
-      </Typography>
+      <NameW>
+        <Typography variant="h1" color={theme.colors.lightestSlate}>
+          Dima Makarenko
+        </Typography>
+      </NameW>
       <Typography>
         I&apos;m a front-end developer specializing in building SPA applications with{' '}
         <Link href={config.links.react}>React.js</Link>.
       </Typography>
-      <HiLink>
-        <Link href={`mailto:${config.email}`} variant="button">
-          Say Hello
-        </Link>
-      </HiLink>
     </HeronW>
   );
 }
