@@ -15,13 +15,13 @@ const Ul = styled.ul<Pick<ListProps, 'columns'>>`
 const Li = styled.li`
   position: relative;
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 17px;
 
   &:before {
     content: '▹';
     position: absolute;
     left: 0px;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.violet};
   }
 `;
 

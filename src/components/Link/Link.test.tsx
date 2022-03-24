@@ -26,6 +26,6 @@ describe('<Link />', () => {
   test('should correct render default link', () => {
     const { textElement } = setupTest();
     expect(textElement).toBeInTheDocument();
-    expect(textElement).toHaveStyle(`color: ${theme.colors.green}`);
+    expect(textElement).toHaveStyle(`color: ${theme.colors.violet}`);
   });
 });

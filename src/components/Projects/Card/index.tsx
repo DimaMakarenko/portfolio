@@ -7,7 +7,7 @@ import { Project } from 'types';
 
 const Title = styled.p`
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.lightestSlate};
+  color: ${({ theme }) => theme.colors.arapawa};
   margin: 10px 0px 10px;
 `;
 const Description = styled.p`
@@ -31,7 +31,7 @@ const Folder = styled.div`
 `;
 
 const ProjectCardW = styled.li`
-  background-color: ${({ theme }) => theme.colors.lightNavy};
+  background-color: ${({ theme }) => theme.colors.darkAqua};
   padding: 2rem 1.75rem;
   transition: ${({ theme }) => theme.transition};
   display: flex;
@@ -41,12 +41,12 @@ const ProjectCardW = styled.li`
   &:hover {
     ${Folder} {
       svg {
-        stroke: ${({ theme }) => theme.colors.green};
+        stroke: ${({ theme }) => theme.colors.violet};
         transition: ${({ theme }) => theme.transition};
       }
     }
     ${Title} {
-      color: ${({ theme }) => theme.colors.green};
+      color: ${({ theme }) => theme.colors.violet};
     }
   }
 `;

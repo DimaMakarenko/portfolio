@@ -7,7 +7,6 @@ import { Projects } from 'types';
 import { ProjectCard } from '../Card';
 
 const ListW = styled.ul`
-  margin: 50px 0px 0px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;

@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
 import { navLinks } from 'content';
-import { scrollToElementById } from 'hooks';
+import { useScrollToElementById } from 'hooks';
 
 const NavbarW = styled.nav`
   height: 80px;
@@ -20,28 +20,20 @@ const MenuItem = styled.li`
   margin: 0px 5px;
 `;
 
-const Link = styled.a<{ count: number }>`
-  color: ${({ theme }) => theme.colors.lightestSlate};
+const Link = styled.a`
+  color: ${({ theme }) => theme.colors.arapawa};
   padding: 10px;
-
-  &:before {
-    content: '0${({ count }) => count}.';
-    position: relative;
-    margin-right: 5px;
-    color: ${({ theme }) => theme.colors.green};
-    font-family: 'Inconsolata', monospace;
-  }
 `;
 
 export function Navbar(): ReactElement {
-  const { handleScroll } = scrollToElementById();
+  const { handleScroll } = useScrollToElementById();
 
   return (
     <NavbarW>
       <Menu>
-        {navLinks.map(({ title, url, id }, index) => (
-          <MenuItem key={index}>
-            <Link href={url} onClick={() => handleScroll(id)} count={index + 1}>
+        {navLinks.map(({ title, url, id }) => (
+          <MenuItem key={id}>
+            <Link href={url} onClick={() => handleScroll(id)}>
               {title}
             </Link>
           </MenuItem>

@@ -4,17 +4,20 @@ import styled from 'styled-components/macro';
 import { icons } from 'assets/icons';
 import { Link, Navbar, LinkElement } from 'components';
 import { config } from 'config';
+import { useScrollDirection } from 'hooks';
 import { hexToRgb } from 'utils';
 
-const HeaderW = styled.header`
+const HeaderW = styled.header<{ isHide: boolean }>`
   position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0 50px;
   align-items: center;
-  background-color: rgba(${({ theme }) => hexToRgb(theme.colors.navy)}, 0.9);
+  background-color: rgba(${({ theme }) => hexToRgb(theme.colors.aqua)}, 0.9);
   z-index: ${({ theme }) => theme.zIndex.header};
+  transition: ${({ theme }) => theme.transition};
+  transform: translateY(${({ isHide }) => (isHide ? '-80px' : '0px')});
 `;
 
 const Menu = styled.div`
@@ -33,17 +36,19 @@ const Logo = styled.div`
     padding: 10px;
   }
   svg {
-    stroke: ${({ theme }) => theme.colors.green};
+    stroke: ${({ theme }) => theme.colors.violet};
     width: 40px;
     height: 40px;
     display: block;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.violet};
   }
 `;
 
 export function Header(): ReactElement {
+  const { direction } = useScrollDirection();
+
   return (
-    <HeaderW>
+    <HeaderW isHide={direction === 'down'}>
       <Logo>
         <Link variant="basic" href="/#">
           {icons.logo}

@@ -7,7 +7,7 @@ interface CounterHeadingProps {
 }
 const CounterHeadingElement = styled.h2<Pick<CounterHeadingProps, 'count'>>`
   position: relative;
-  color: ${({ theme }) => theme.colors.lightestSlate};
+  color: ${({ theme }) => theme.colors.arapawa};
   width: 100%;
   white-space: nowrap;
   display: flex;
@@ -18,7 +18,7 @@ const CounterHeadingElement = styled.h2<Pick<CounterHeadingProps, 'count'>>`
     content: '0${({ count }) => count}.';
     position: relative;
     margin-right: 10px;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.violet};
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
@@ -28,10 +28,12 @@ const CounterHeadingElement = styled.h2<Pick<CounterHeadingProps, 'count'>>`
     content: '';
     display: block;
     position: relative;
-    width: 300px;
-    height: 1px;
-    margin-left: 20px;
-    background-color: ${({ theme }) => theme.colors.slate};
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-left: 5px;
+    background-color: ${({ theme }) => theme.colors.glacier};
   }
 
   font-weight: 600;

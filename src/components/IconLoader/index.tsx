@@ -9,7 +9,7 @@ const IconLoaderW = styled.div<{ isMounted: boolean }>`
   height: 100vh;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndex.iconLoader};
-  background-color: ${({ theme }) => theme.colors.darkNavy};
+  background-color: ${({ theme }) => theme.colors.darkAqua};
   position: fixed;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@ const IconLoaderW = styled.div<{ isMounted: boolean }>`
   svg {
     width: 80px;
     height: 80px;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.violet};
     display: block;
     margin: 0 auto;
     fill: none;

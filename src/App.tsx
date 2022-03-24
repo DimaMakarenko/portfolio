@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { SocialSide, Header, IconLoader } from 'components';
-import { Hero, About, Experience, Projects } from 'sections';
+import { SocialSide, Header, IconLoader, Footer } from 'components';
+import { Hero, About, Experience, Projects, Contact } from 'sections';
 
 const Main = styled.main`
   padding: 0px 150px;
@@ -21,6 +21,8 @@ export function App(): ReactElement {
         <About />
         <Experience />
         <Projects />
+        <Contact />
+        <Footer />
       </Main>
     </div>
   );

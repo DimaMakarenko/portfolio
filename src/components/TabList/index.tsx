@@ -14,7 +14,7 @@ const Tab = styled.button<{ isActive: boolean }>`
   width: 100%;
   height: ${({ theme }) => theme.tabs.height}px;
   padding: 0px 20px 2px;
-  color: ${({ theme, isActive }) => (isActive ? theme.colors.green : theme.colors.slate)};
+  color: ${({ theme, isActive }) => (isActive ? theme.colors.violet : theme.colors.slate)};
   text-align: left;
   text-transform: capitalize;
   border-left: 2px solid ${({ theme }) => theme.colors.lightestNavy};
@@ -25,8 +25,8 @@ const Tab = styled.button<{ isActive: boolean }>`
 
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.colors.lightNavy};
-    color: ${({ theme }) => theme.colors.green};
+    background-color: ${({ theme }) => theme.colors.darkAqua};
+    color: ${({ theme }) => theme.colors.violet};
   }
 `;
 
@@ -38,7 +38,7 @@ const Highlight = styled.div<{ activeTabId: number }>`
   z-index: 10;
   width: 2px;
   transition-delay: 0.1s;
-  background-color: ${({ theme }) => theme.colors.green};
+  background-color: ${({ theme }) => theme.colors.violet};
   transition: ${({ theme }) => theme.transition};
 `;
 

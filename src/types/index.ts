@@ -37,6 +37,7 @@ export enum NavLinkNames {
   About = 'about',
   Experience = 'experience',
   Projects = 'projects',
+  Contact = 'contact',
 }
 
 type Period = {
