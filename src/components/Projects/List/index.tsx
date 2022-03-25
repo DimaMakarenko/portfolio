@@ -8,7 +8,7 @@ import { ProjectCard } from '../Card';
 
 const ListW = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   gap: 20px;
 `;
 

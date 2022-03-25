@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { ReactComponent as FolderIcon } from 'assets/icons/folder.svg';
-import { Link } from 'components';
+import { Link, Code, CodeW } from 'components';
 import { Project } from 'types';
+import { hexToRgb } from 'utils';
 
 const Title = styled.p`
   font-weight: 600;
@@ -15,41 +15,50 @@ const Description = styled.p`
   text-align: justify;
 `;
 
+const DescriptionW = styled.div`
+  margin: 10px 0 auto;
+`;
+
 const Technologies = styled.ul`
   display: flex;
   align-items: flex-end;
-  flex-grow: 1;
   flex-wrap: wrap;
   font-size: 16px;
-  margin-top: 20px;
-`;
-const Folder = styled.div`
-  svg {
-    width: 34px;
-    height: 34px;
+
+  ${CodeW} {
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 `;
 
-const ProjectCardW = styled.li`
-  background-color: ${({ theme }) => theme.colors.darkAqua};
+export const ProjectCardW = styled.li`
+  background: linear-gradient(
+    to bottom,
+    rgba(${({ theme }) => hexToRgb(theme.colors.darkAqua)}, 0.8) 0%,
+    ${({ theme }) => theme.colors.aqua} 100%
+  );
+
   padding: 2rem 1.75rem;
   transition: ${({ theme }) => theme.transition};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
-  &:hover {
-    ${Folder} {
-      svg {
-        stroke: ${({ theme }) => theme.colors.violet};
-        transition: ${({ theme }) => theme.transition};
-      }
-    }
-    ${Title} {
-      color: ${({ theme }) => theme.colors.violet};
-    }
+  &:after {
+    content: '';
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: ${({ theme }) => theme.colors.violet};
   }
 `;
+
 const TechnologyItem = styled.li`
   display: flex;
   align-items: center;
@@ -72,14 +81,12 @@ const TechnologyItem = styled.li`
   }
 `;
 
-const Header = styled.div`
+const Footer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10pxx;
+  justify-content: flex-end;
+  margin-top: 10px;
 `;
-
-const Links = styled.div``;
 
 export function ProjectCard({
   title,
@@ -90,25 +97,20 @@ export function ProjectCard({
 }: Project): ReactElement {
   return (
     <ProjectCardW>
-      <Header>
-        <Folder>
-          <FolderIcon />
-        </Folder>
-        <div>
-          {url && <Link iconName="external" href={url} target="_blank" />}
-          {sourceUrl && <Link iconName="github" href={sourceUrl} target="_blank" />}
-        </div>
-      </Header>
-      <div>
-        <Title>{title}</Title>
-        {description && <Description>{description}</Description>}
-      </div>
-
       <Technologies className="code">
         {technologies.map((technology, index) => (
-          <TechnologyItem key={index}>{technology}</TechnologyItem>
+          <Code key={index}>{technology}</Code>
         ))}
       </Technologies>
+
+      <DescriptionW>
+        <Title>{title}</Title>
+        {description && <Description>{description}</Description>}
+      </DescriptionW>
+      <Footer>
+        {url && <Link iconName="external" href={url} target="_blank" />}
+        {sourceUrl && <Link iconName="github" href={sourceUrl} target="_blank" />}
+      </Footer>
     </ProjectCardW>
   );
 }
