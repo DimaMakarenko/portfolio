@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import styled, { css } from 'styled-components/macro';
 
 enum TypographyVariantTag {
@@ -9,13 +9,13 @@ enum TypographyVariantTag {
 
 export type TypographyVariant = keyof typeof TypographyVariantTag;
 
-export interface TypographyProps {
+export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
   variant?: TypographyVariant;
   color?: string;
 }
 
-const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>>`
+export const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>>`
   display: block;
 
   ${({ variant }) => {
@@ -25,11 +25,21 @@ const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>
           font-size: 80px;
           line-height: 88px;
           font-weight: 600;
+
+          @media ${({ theme }) => theme.devices.laptop} {
+            font-size: 60px;
+            line-height: 66px;
+          }
         `;
       case 'h2':
         return css`
           font-size: 55px;
           line-height: 59px;
+
+          @media ${({ theme }) => theme.devices.laptop} {
+            font-size: 45px;
+            line-height: 50px;
+          }
         `;
       case 'sub-title':
         return css`

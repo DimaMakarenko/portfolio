@@ -14,11 +14,13 @@ const Title = styled.p`
 const Description = styled.p`
   font-size: 18px;
   text-align: justify;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    font-size: 15px;
+  }
 `;
 
-const DescriptionW = styled.div`
-  /* margin: 10px 0 auto; */
-`;
+const DescriptionW = styled.div``;
 
 const Technologies = styled.ul`
   display: flex;
@@ -28,6 +30,7 @@ const Technologies = styled.ul`
 
   ${CodeW} {
     margin-right: 15px;
+    margin-bottom: 10px;
 
     &:last-of-type {
       margin-right: 0;
@@ -58,6 +61,10 @@ export const ProjectCardW = styled.li`
     right: 0;
     background-color: ${({ theme }) => theme.colors.main};
   }
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    padding: 1.5rem 1.25rem;
+  }
 `;
 
 const Footer = styled.div`
@@ -70,6 +77,7 @@ const Footer = styled.div`
 const Links = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export function ProjectCard({

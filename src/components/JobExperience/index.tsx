@@ -22,8 +22,13 @@ const Block = styled.div`
   font-size: 17px;
   margin: 5px 0 14px;
   display: grid;
-  grid-template-columns: 165px 1fr;
+  grid-template-columns: 140px 1fr;
   gap: 5px 20px;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    font-size: 14px;
+    grid-template-columns: 110px 1fr;
+  }
 `;
 
 const BlockHeader = styled.p`
@@ -49,6 +54,9 @@ const BlockHeader = styled.p`
     &:after {
       content: ':';
     }
+  }
+  @media ${({ theme }) => theme.devices.tablet} {
+    font-weight: 400;
   }
 `;
 
@@ -96,7 +104,7 @@ export function JobExperience({
       </Block>
       <Block>
         <BlockHeader>
-          <span>Project Team Size</span>
+          <span>Teams Size</span>
         </BlockHeader>
         <span className="code">{projectTeamSize}</span>
       </Block>

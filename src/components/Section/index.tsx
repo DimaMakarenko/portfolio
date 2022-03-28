@@ -12,7 +12,7 @@ const Header = styled.h2`
   align-items: center;
   font-weight: 600;
   font-size: 34px;
-  margin: 10px 0 40px;
+  margin: 10px 0 60px;
   justify-content: center;
 `;
 

@@ -23,6 +23,11 @@ const Tab = styled.button<{ isActive: boolean }>`
   font-size: 15px;
   font-family: inherit;
 
+  @media ${({ theme }) => theme.devices.tablet} {
+    padding: 0px 10px 2px;
+    font-size: 14px;
+  }
+
   &:hover,
   &:focus {
     background-color: ${({ theme }) => theme.colors.darkBg};
@@ -56,6 +61,13 @@ const TabListW = styled.div`
 
 const TabValue = styled.div`
   margin-left: 30px;
+
+  @media ${({ theme }) => theme.devices.laptop} {
+    margin-left: 20px;
+  }
+  @media ${({ theme }) => theme.devices.tablet} {
+    margin-left: 15px;
+  }
 `;
 
 export function TabList({ tabs }: TabListProps): ReactElement {

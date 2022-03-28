@@ -11,6 +11,7 @@ const HeronW = styled.section`
   align-items: center;
   justify-content: center;
   margin: 0 0 100px;
+  text-align: center;
 `;
 
 const NameW = styled.div`

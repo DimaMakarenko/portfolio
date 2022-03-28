@@ -23,6 +23,10 @@ const SideElement = styled.div<Pick<SideProps, 'position'>>`
     margin: 0px auto;
     background-color: ${({ theme }) => theme.colors.text};
   }
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: none;
+  }
 `;
 
 export const Side = ({ position = 'left', children }: SideProps): ReactElement => {

@@ -53,8 +53,13 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
           border: 1px solid ${({ theme }) => theme.colors.main};
           border-radius: 4px;
           transition: ${({ theme }) => theme.transition};
+
           &:hover {
             background-color: ${({ theme }) => theme.colors.lightMain};
+          }
+
+          @media ${({ theme }) => theme.devices.laptop} {
+            padding: 0.75rem 1rem;
           }
         `;
       case 'icon':

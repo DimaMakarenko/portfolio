@@ -17,9 +17,18 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-size: 20px;
     line-height: 25px;
     font-family: 'Poppins', sans-serif;
+
+    @media ${({ theme }) => theme.devices.tablet} {
+      font-size: 17px;
+      line-height: 22px;
+    }
   }
   section {
     margin: 100px 0 175px;
+
+    @media ${({ theme }) => theme.devices.laptop} {
+      margin: 80px 0 125px;
+    }
   }
   button {
     border: 0px;

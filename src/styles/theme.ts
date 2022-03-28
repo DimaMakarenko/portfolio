@@ -1,3 +1,5 @@
+import { devices } from './sizes';
+
 export const theme = {
   colors: {
     darkBg: '#D8E9F3',
@@ -20,6 +22,11 @@ export const theme = {
   sizes: {
     maxWidth: 1500,
   },
+  screenSizes: {
+    tablet: '768px',
+    laptop: '1100px',
+  },
+  devices,
 };
 
 export type ThemeType = typeof theme;
