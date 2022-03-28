@@ -21,7 +21,7 @@ const Li = styled.li`
     content: '▹';
     position: absolute;
     left: 0px;
-    color: ${({ theme }) => theme.colors.violet};
+    color: ${({ theme }) => theme.colors.main};
   }
 `;
 

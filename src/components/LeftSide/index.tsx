@@ -1,11 +1,10 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Side } from 'components';
-import { Link } from 'components/Link';
+import { Side, Link } from 'components';
 import { socialLinks } from 'content';
 
-const SocialSideW = styled.ul`
+const LeftSideW = styled.ul`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -17,16 +16,16 @@ const SocialSideW = styled.ul`
   }
 `;
 
-export const SocialSide = (): ReactElement => {
+export const LeftSide = (): ReactElement => {
   return (
     <Side>
-      <SocialSideW>
+      <LeftSideW>
         {socialLinks.map(({ url, iconName }) => (
           <li key={url}>
             <Link href={url} iconName={iconName} />
           </li>
         ))}
-      </SocialSideW>
+      </LeftSideW>
     </Side>
   );
 };

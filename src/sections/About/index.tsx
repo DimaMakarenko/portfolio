@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { CounterHeading, Typography, List } from 'components';
+import { Typography, List, Section } from 'components';
 import { technologies } from 'content';
 import { theme } from 'styles';
 import { NavLinkNames } from 'types';
@@ -12,14 +12,13 @@ const ListW = styled.div`
 
 export const About = (): ReactElement => {
   return (
-    <section id={NavLinkNames.About}>
-      <CounterHeading count={1}>About</CounterHeading>
+    <Section id={NavLinkNames.About} title="About">
       <Typography>Hi! My name is Dima. I&apos;m Front-end developer.</Typography>
       <Typography>Here are a few technologies I&apos;ve been working with recently:</Typography>
       <ListW>
         <List data={technologies} columns={3} />
       </ListW>
-      <Typography variant="sub-title" color={theme.colors.arapawa}>
+      <Typography variant="sub-title" color={theme.colors.text}>
         Summary of Qualifications
       </Typography>
       <Typography>
@@ -29,7 +28,7 @@ export const About = (): ReactElement => {
         try to write good projects that are easy to understand and scale. I am professional and
         responsible for the work I do.
       </Typography>
-      <Typography variant="sub-title" color={theme.colors.arapawa}>
+      <Typography variant="sub-title" color={theme.colors.text}>
         Additional Accomplishments
       </Typography>
       <Typography>
@@ -40,6 +39,6 @@ export const About = (): ReactElement => {
         example, used Firebase as database and back-end. Attended various conferences and read
         technical literature. Helped a trainee with test task and was mentor for him.
       </Typography>
-    </section>
+    </Section>
   );
 };

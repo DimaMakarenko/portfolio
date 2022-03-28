@@ -1,11 +1,18 @@
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components/macro';
 
-const SideElement = styled.div`
+interface SideProps {
+  children: ReactNode;
+  position?: 'left' | 'right';
+}
+
+const SideElement = styled.div<Pick<SideProps, 'position'>>`
   width: 40px;
   position: fixed;
   bottom: 0;
-  left: 40px;
+  left: ${({ position }) => (position === 'left' ? '40px' : 'auto')};
+  right: ${({ position }) => (position === 'right' ? '40px' : 'auto')};
+
   z-index: ${({ theme }) => theme.zIndex.side};
 
   &:after {
@@ -14,14 +21,10 @@ const SideElement = styled.div`
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: ${({ theme }) => theme.colors.arapawa};
+    background-color: ${({ theme }) => theme.colors.text};
   }
 `;
 
-interface SideProps {
-  children: ReactNode;
-}
-
-export const Side = ({ children }: SideProps): ReactElement => {
-  return <SideElement>{children}</SideElement>;
+export const Side = ({ position = 'left', children }: SideProps): ReactElement => {
+  return <SideElement position={position}>{children}</SideElement>;
 };

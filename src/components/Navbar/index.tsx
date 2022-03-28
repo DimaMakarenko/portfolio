@@ -21,7 +21,7 @@ const MenuItem = styled.li`
 `;
 
 const Link = styled.a`
-  color: ${({ theme }) => theme.colors.arapawa};
+  color: ${({ theme }) => theme.colors.text};
   padding: 10px;
 `;
 

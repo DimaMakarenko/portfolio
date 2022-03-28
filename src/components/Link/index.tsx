@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, HTMLProps, ReactNode } from 'react';
+import { AnchorHTMLAttributes, ReactNode } from 'react';
 import styled, { css } from 'styled-components/macro';
 
 import { icons, Icons } from 'assets/icons';
@@ -22,7 +22,7 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
   cursor: pointer;
   position: relative;
 
-  color: ${({ theme }) => theme.colors.violet};
+  color: ${({ theme }) => theme.colors.main};
   display: inline-block;
 
   ${({ variant }) => {
@@ -37,7 +37,7 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
             position: absolute;
             bottom: 0px;
             left: 0px;
-            background-color: ${({ theme }) => theme.colors.violet};
+            background-color: ${({ theme }) => theme.colors.main};
             transition: ${({ theme }) => theme.transition};
             opacity: 0.5;
           }
@@ -50,11 +50,11 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
       case 'button':
         return css`
           padding: 1rem 1.25rem;
-          border: 1px solid ${({ theme }) => theme.colors.violet};
-          border-radius: ${({ theme }) => theme.borderRadius};
+          border: 1px solid ${({ theme }) => theme.colors.main};
+          border-radius: 4px;
           transition: ${({ theme }) => theme.transition};
           &:hover {
-            background-color: ${({ theme }) => theme.colors.lightViolet};
+            background-color: ${({ theme }) => theme.colors.lightMain};
           }
         `;
       case 'icon':
@@ -66,7 +66,7 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
           transition: ${({ theme }) => theme.transition};
 
           svg {
-            stroke: ${({ theme }) => theme.colors.arapawa};
+            stroke: ${({ theme }) => theme.colors.text};
             width: 20px;
             height: 20px;
             display: block;
@@ -75,7 +75,7 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
           &:focus {
             transform: translateY(-3px);
             svg {
-              stroke: ${({ theme }) => theme.colors.violet};
+              stroke: ${({ theme }) => theme.colors.main};
             }
           }
         `;

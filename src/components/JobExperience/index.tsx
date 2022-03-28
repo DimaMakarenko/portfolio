@@ -28,7 +28,7 @@ const Block = styled.div`
 
 const BlockHeader = styled.p`
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.arapawa};
+  color: ${({ theme }) => theme.colors.text};
   height: min-content;
   text-align: right;
   white-space: nowrap;
@@ -41,7 +41,7 @@ const BlockHeader = styled.p`
       content: '';
       width: 100%;
       height: 1px;
-      background-color: ${({ theme }) => theme.colors.violet};
+      background-color: ${({ theme }) => theme.colors.main};
       position: absolute;
       right: 0;
       bottom: 0;
@@ -65,10 +65,10 @@ export function JobExperience({
   return (
     <div>
       <Title>
-        <Typography color={theme.colors.arapawa}>{projectRole}</Typography>
+        <Typography color={theme.colors.text}>{projectRole}</Typography>
         {companyUrl && (
           <>
-            <Typography color={theme.colors.violet}>&nbsp;@&nbsp;</Typography>
+            <Typography color={theme.colors.main}>&nbsp;@&nbsp;</Typography>
             <Link href={companyUrl}>{companyName}</Link>
           </>
         )}

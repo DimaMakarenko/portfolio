@@ -5,7 +5,7 @@ import { icons } from 'assets/icons';
 import { config } from 'config';
 
 const FooterW = styled.footer`
-  color: ${({ theme }) => theme.colors.arapawa};
+  color: ${({ theme }) => theme.colors.text};
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ export function Footer(): ReactElement {
 
   return (
     <FooterW className="code">
-      <p>Designed &amp; Built by Dima Makarenko</p>
+      <p>Built by Dima Makarenko</p>
       <StarsW>
         {icons.star}
         <span>{githubInfo.stars.toLocaleString()}</span>

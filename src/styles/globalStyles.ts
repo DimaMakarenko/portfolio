@@ -12,14 +12,14 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     
   }
   body {
-    background-color: ${({ theme }) => theme.colors.aqua};
-    color: ${({ theme }) => theme.colors.slate};
+    background-color: ${({ theme }) => theme.colors.bg};
+    color: ${({ theme }) => theme.colors.text};
     font-size: 20px;
     line-height: 25px;
     font-family: 'Poppins', sans-serif;
   }
   section {
-    padding: 100px 0;
+    margin: 100px 0;
   }
   button {
     border: 0px;

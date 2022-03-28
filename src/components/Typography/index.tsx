@@ -44,7 +44,7 @@ const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | 'color'>
             width: 100px;
             height: 2px;
             position: absolute;
-            background-color: ${({ theme }) => theme.colors.violet};
+            background-color: ${({ theme }) => theme.colors.main};
             left: 0px;
             bottom: 0px;
           }

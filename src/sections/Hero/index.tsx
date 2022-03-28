@@ -21,7 +21,7 @@ export function Hero() {
     <HeronW>
       <Typography variant="h2">Hi, my name is</Typography>
       <NameW>
-        <Typography variant="h1" color={theme.colors.arapawa}>
+        <Typography variant="h1" color={theme.colors.text}>
           Dima Makarenko
         </Typography>
       </NameW>

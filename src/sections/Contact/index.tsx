@@ -1,16 +1,10 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { CounterHeading, Typography, Link } from 'components';
+import { Typography, Link, SectionW } from 'components';
 import { config } from 'config';
 import { theme } from 'styles';
 import { NavLinkNames } from 'types';
-
-const ContactW = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 
 const DescriptionW = styled.div`
   max-width: 700px;
@@ -18,11 +12,16 @@ const DescriptionW = styled.div`
   margin: 30px 0 40px;
 `;
 
+const ContactW = styled(SectionW)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export function Contact(): ReactElement {
   return (
-    <ContactW id={NavLinkNames.Contact}>
-      <CounterHeading count={4}>Contact</CounterHeading>
-      <Typography variant="h2" color={theme.colors.arapawa}>
+    <ContactW id={NavLinkNames.Contact} title="Contact">
+      <Typography variant="h2" color={theme.colors.text}>
         Keep in touch
       </Typography>
       <DescriptionW>

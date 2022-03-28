@@ -1,13 +1,14 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Link, Code, CodeW } from 'components';
+import { Link, Code } from 'components';
+import { CodeW } from 'components/Code';
 import { Project } from 'types';
 import { hexToRgb } from 'utils';
 
 const Title = styled.p`
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.arapawa};
+  color: ${({ theme }) => theme.colors.text};
   margin: 10px 0px 10px;
 `;
 const Description = styled.p`
@@ -37,8 +38,8 @@ const Technologies = styled.ul`
 export const ProjectCardW = styled.li`
   background: linear-gradient(
     to bottom,
-    rgba(${({ theme }) => hexToRgb(theme.colors.darkAqua)}, 0.8) 0%,
-    ${({ theme }) => theme.colors.aqua} 100%
+    rgba(${({ theme }) => hexToRgb(theme.colors.darkBg)}, 0.8) 0%,
+    ${({ theme }) => theme.colors.bg} 100%
   );
 
   padding: 2rem 1.75rem;
@@ -55,29 +56,7 @@ export const ProjectCardW = styled.li`
     top: 0;
     left: 0;
     right: 0;
-    background-color: ${({ theme }) => theme.colors.violet};
-  }
-`;
-
-const TechnologyItem = styled.li`
-  display: flex;
-  align-items: center;
-
-  &:after {
-    content: '';
-    position: relative;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: ${({ theme }) => theme.colors.slate};
-    display: block;
-  }
-
-  &:last-of-type {
-    &:after {
-      content: none;
-    }
+    background-color: ${({ theme }) => theme.colors.main};
   }
 `;
 
