@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-family: 'Poppins', sans-serif;
   }
   section {
-    margin: 100px 0;
+    margin: 100px 0 175px;
   }
   button {
     border: 0px;

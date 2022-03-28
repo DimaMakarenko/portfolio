@@ -10,6 +10,7 @@ const HeronW = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 0 100px;
 `;
 
 const NameW = styled.div`

@@ -68,7 +68,7 @@ export function JobExperience({
         <Typography color={theme.colors.text}>{projectRole}</Typography>
         {companyUrl && (
           <>
-            <Typography color={theme.colors.main}>&nbsp;@&nbsp;</Typography>
+            <Typography>&nbsp;at&nbsp;</Typography>
             <Link href={companyUrl}>{companyName}</Link>
           </>
         )}

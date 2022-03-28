@@ -17,7 +17,7 @@ const Description = styled.p`
 `;
 
 const DescriptionW = styled.div`
-  margin: 10px 0 auto;
+  /* margin: 10px 0 auto; */
 `;
 
 const Technologies = styled.ul`
@@ -63,8 +63,13 @@ export const ProjectCardW = styled.li`
 const Footer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-top: 10px;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
+
+const Links = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export function ProjectCard({
@@ -76,19 +81,20 @@ export function ProjectCard({
 }: Project): ReactElement {
   return (
     <ProjectCardW>
-      <Technologies className="code">
-        {technologies.map((technology, index) => (
-          <Code key={index}>{technology}</Code>
-        ))}
-      </Technologies>
-
       <DescriptionW>
         <Title>{title}</Title>
         {description && <Description>{description}</Description>}
       </DescriptionW>
       <Footer>
-        {url && <Link iconName="external" href={url} target="_blank" />}
-        {sourceUrl && <Link iconName="github" href={sourceUrl} target="_blank" />}
+        <Technologies>
+          {technologies.map((technology, index) => (
+            <Code key={index}>{technology}</Code>
+          ))}
+        </Technologies>
+        <Links>
+          {url && <Link iconName="external" href={url} target="_blank" />}
+          {sourceUrl && <Link iconName="github" href={sourceUrl} target="_blank" />}
+        </Links>
       </Footer>
     </ProjectCardW>
   );
