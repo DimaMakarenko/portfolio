@@ -30,6 +30,10 @@ export const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | '
             font-size: 60px;
             line-height: 66px;
           }
+          @media ${({ theme }) => theme.devices.tablet} {
+            font-size: 48px;
+            line-height: 52px;
+          }
         `;
       case 'h2':
         return css`
@@ -39,6 +43,10 @@ export const TypographyElement = styled.span<Pick<TypographyProps, 'variant' | '
           @media ${({ theme }) => theme.devices.laptop} {
             font-size: 45px;
             line-height: 50px;
+          }
+          @media ${({ theme }) => theme.devices.tablet} {
+            font-size: 38px;
+            line-height: 42px;
           }
         `;
       case 'sub-title':

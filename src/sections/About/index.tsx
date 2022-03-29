@@ -15,6 +15,7 @@ const Description = styled(TypographyElement)`
 
   @media ${({ theme }) => theme.devices.tablet} {
     font-size: 16px;
+    text-align: justify;
   }
 `;
 
@@ -24,7 +25,7 @@ export const About = (): ReactElement => {
       <Typography>Hi! My name is Dima. I&apos;m Front-end developer.</Typography>
       <Typography>Here are a few technologies I&apos;ve been working with recently:</Typography>
       <ListW>
-        <List data={technologies} columns={3} />
+        <List data={technologies} />
       </ListW>
       <Typography variant="sub-title" color={theme.colors.text}>
         Summary of Qualifications

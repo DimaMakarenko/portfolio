@@ -10,11 +10,20 @@ const Title = styled.p`
   display: flex;
   font-weight: 500;
   font-size: 22px;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    font-size: 18px;
+  }
 `;
 
 const Period = styled.p`
   font-size: 16px;
   margin: 5px 0 20px;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    font-size: 15px;
+    margin: 5px 0 15px;
+  }
 `;
 
 const Block = styled.div`
@@ -25,14 +34,13 @@ const Block = styled.div`
   grid-template-columns: 140px 1fr;
   gap: 5px 20px;
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.laptop} {
     font-size: 14px;
     grid-template-columns: 110px 1fr;
   }
 `;
 
 const BlockHeader = styled.p`
-  font-weight: 500;
   color: ${({ theme }) => theme.colors.text};
   height: min-content;
   text-align: right;
@@ -54,9 +62,6 @@ const BlockHeader = styled.p`
     &:after {
       content: ':';
     }
-  }
-  @media ${({ theme }) => theme.devices.tablet} {
-    font-weight: 400;
   }
 `;
 

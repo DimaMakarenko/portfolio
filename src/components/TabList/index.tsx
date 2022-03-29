@@ -6,15 +6,16 @@ interface TabListProps {
 }
 
 const Tab = styled.button<{ isActive: boolean }>`
-  background-color: transparent;
   position: relative;
   transition: ${({ theme }) => theme.transition};
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 140px;
   height: ${({ theme }) => theme.tabs.height}px;
   padding: 0px 20px 2px;
   color: ${({ theme, isActive }) => (isActive ? theme.colors.main : theme.colors.text)};
+  background-color: ${({ theme, isActive }) => (isActive ? theme.colors.darkBg : 'transparent')};
+
   text-align: left;
   text-transform: capitalize;
   border-left: 2px solid ${({ theme }) => theme.colors.lightestNavy};
@@ -23,9 +24,14 @@ const Tab = styled.button<{ isActive: boolean }>`
   font-size: 15px;
   font-family: inherit;
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.laptop} {
     padding: 0px 10px 2px;
     font-size: 14px;
+  }
+  @media ${({ theme }) => theme.devices.tablet} {
+    width: 110px;
+    border-left: none;
+    justify-content: center;
   }
 
   &:hover,
@@ -45,6 +51,10 @@ const Highlight = styled.div<{ activeTabId: number }>`
   transition-delay: 0.1s;
   background-color: ${({ theme }) => theme.colors.main};
   transition: ${({ theme }) => theme.transition};
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: none;
+  }
 `;
 
 const Tabs = styled.div`
@@ -52,11 +62,21 @@ const Tabs = styled.div`
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  width: max-content;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    flex-direction: row;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    width: 100%;
+  }
 `;
 
 const TabListW = styled.div`
   display: flex;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const TabValue = styled.div`

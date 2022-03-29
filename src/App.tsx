@@ -13,18 +13,19 @@ const Main = styled.main`
     padding: 0px 100px;
   }
   @media ${({ theme }) => theme.devices.tablet} {
-    padding: 0px 60px;
+    padding: 0px 30px;
   }
 `;
 
 export function App(): ReactElement {
   return (
     <div>
-      <IconLoader />
+      {/* TODO: turn on loader */}
+      {/* <IconLoader /> */}
       <Header />
+      <LeftSide />
+      <RightSide />
       <Main>
-        <LeftSide />
-        <RightSide />
         <Hero />
         <About />
         <Experience />

@@ -15,7 +15,7 @@ const Description = styled.p`
   font-size: 18px;
   text-align: justify;
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.laptop} {
     font-size: 15px;
   }
 `;
@@ -62,7 +62,7 @@ export const ProjectCardW = styled.li`
     background-color: ${({ theme }) => theme.colors.main};
   }
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.laptop} {
     padding: 1.5rem 1.25rem;
   }
 `;
