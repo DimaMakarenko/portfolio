@@ -10,6 +10,8 @@ const HeronW = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 0 100px;
+  text-align: center;
 `;
 
 const NameW = styled.div`
@@ -21,7 +23,7 @@ export function Hero() {
     <HeronW>
       <Typography variant="h2">Hi, my name is</Typography>
       <NameW>
-        <Typography variant="h1" color={theme.colors.arapawa}>
+        <Typography variant="h1" color={theme.colors.text}>
           Dima Makarenko
         </Typography>
       </NameW>

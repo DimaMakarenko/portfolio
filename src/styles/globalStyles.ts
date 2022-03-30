@@ -12,19 +12,27 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     
   }
   body {
-    background-color: ${({ theme }) => theme.colors.aqua};
-    color: ${({ theme }) => theme.colors.slate};
+    background-color: ${({ theme }) => theme.colors.bg};
+    color: ${({ theme }) => theme.colors.text};
     font-size: 20px;
     line-height: 25px;
     font-family: 'Poppins', sans-serif;
-  }
-  section {
-    padding: 100px 0;
+
+    &.blur {
+      overflow: hidden;
+    }
+
+    @media ${({ theme }) => theme.devices.tablet} {
+      font-size: 17px;
+      line-height: 22px;
+    }
   }
   button {
     border: 0px;
     border-radius: 0px;
     cursor: pointer;
+    outline: none;
+    background-color: transparent;
   }
   a {
     text-decoration: none ;

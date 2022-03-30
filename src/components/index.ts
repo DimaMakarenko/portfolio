@@ -1,7 +1,6 @@
 export * from './Typography';
-export * from './CounterHeading';
 export * from './Side';
-export * from './SocialSide';
+export * from './LeftSide';
 export * from './List';
 export * from './Link';
 export * from './TabList';
@@ -11,3 +10,7 @@ export * from './Header';
 export * from './Navbar';
 export * from './IconLoader';
 export * from './Footer';
+export * from './Code';
+export * from './Section';
+export * from './RightSide';
+export * from './SocialLinks';

@@ -52,8 +52,8 @@ export type Job = {
   period: Period;
   projectRole: string;
   responsibilities: string;
-  projectTeamSize: string;
-  description: string;
+  projectTeamSize?: string;
+  description?: string;
 };
 
 export type Jobs = Job[];

@@ -3,13 +3,16 @@ import styled from 'styled-components/macro';
 
 interface ListProps {
   data: string[];
-  columns?: number;
 }
 
-const Ul = styled.ul<Pick<ListProps, 'columns'>>`
+const Ul = styled.ul`
   display: grid;
-  grid-template-columns: repeat(${({ columns }) => columns}, minmax(min-content, max-content));
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
   gap: 5px 40px;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+  }
 `;
 
 const Li = styled.li`
@@ -21,13 +24,13 @@ const Li = styled.li`
     content: '▹';
     position: absolute;
     left: 0px;
-    color: ${({ theme }) => theme.colors.violet};
+    color: ${({ theme }) => theme.colors.main};
   }
 `;
 
-export const List = ({ data, columns }: ListProps): ReactElement => {
+export const List = ({ data }: ListProps): ReactElement => {
   return (
-    <Ul columns={columns} className="code">
+    <Ul className="code">
       {data.map((item, index) => (
         <Li key={index}>{item}</Li>
       ))}

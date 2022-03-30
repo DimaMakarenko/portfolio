@@ -1,85 +1,84 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { ReactComponent as FolderIcon } from 'assets/icons/folder.svg';
-import { Link } from 'components';
+import { Link, Code } from 'components';
+import { CodeW } from 'components/Code';
 import { Project } from 'types';
+import { hexToRgb } from 'utils';
 
 const Title = styled.p`
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.arapawa};
+  color: ${({ theme }) => theme.colors.text};
   margin: 10px 0px 10px;
 `;
 const Description = styled.p`
   font-size: 18px;
   text-align: justify;
+
+  @media ${({ theme }) => theme.devices.laptop} {
+    font-size: 15px;
+  }
 `;
+
+const DescriptionW = styled.div``;
 
 const Technologies = styled.ul`
   display: flex;
   align-items: flex-end;
-  flex-grow: 1;
   flex-wrap: wrap;
   font-size: 16px;
-  margin-top: 20px;
-`;
-const Folder = styled.div`
-  svg {
-    width: 34px;
-    height: 34px;
+
+  ${CodeW} {
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 `;
 
-const ProjectCardW = styled.li`
-  background-color: ${({ theme }) => theme.colors.darkAqua};
+export const ProjectCardW = styled.li`
+  background: linear-gradient(
+    to bottom,
+    rgba(${({ theme }) => hexToRgb(theme.colors.darkBg)}, 0.8) 0%,
+    ${({ theme }) => theme.colors.bg} 100%
+  );
+
   padding: 2rem 1.75rem;
   transition: ${({ theme }) => theme.transition};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  &:hover {
-    ${Folder} {
-      svg {
-        stroke: ${({ theme }) => theme.colors.violet};
-        transition: ${({ theme }) => theme.transition};
-      }
-    }
-    ${Title} {
-      color: ${({ theme }) => theme.colors.violet};
-    }
-  }
-`;
-const TechnologyItem = styled.li`
-  display: flex;
-  align-items: center;
+  position: relative;
 
   &:after {
     content: '';
-    position: relative;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: ${({ theme }) => theme.colors.slate};
-    display: block;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: ${({ theme }) => theme.colors.main};
   }
 
-  &:last-of-type {
-    &:after {
-      content: none;
-    }
+  @media ${({ theme }) => theme.devices.laptop} {
+    padding: 1.5rem 1.25rem;
   }
 `;
 
-const Header = styled.div`
+const Footer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10pxx;
+  margin-top: 20px;
 `;
 
-const Links = styled.div``;
+const Links = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+`;
 
 export function ProjectCard({
   title,
@@ -90,25 +89,21 @@ export function ProjectCard({
 }: Project): ReactElement {
   return (
     <ProjectCardW>
-      <Header>
-        <Folder>
-          <FolderIcon />
-        </Folder>
-        <div>
-          {url && <Link iconName="external" href={url} target="_blank" />}
-          {sourceUrl && <Link iconName="github" href={sourceUrl} target="_blank" />}
-        </div>
-      </Header>
-      <div>
+      <DescriptionW>
         <Title>{title}</Title>
         {description && <Description>{description}</Description>}
-      </div>
-
-      <Technologies className="code">
-        {technologies.map((technology, index) => (
-          <TechnologyItem key={index}>{technology}</TechnologyItem>
-        ))}
-      </Technologies>
+      </DescriptionW>
+      <Footer>
+        <Technologies>
+          {technologies.map((technology, index) => (
+            <Code key={index}>{technology}</Code>
+          ))}
+        </Technologies>
+        <Links>
+          {url && <Link iconName="external" href={url} target="_blank" />}
+          {sourceUrl && <Link iconName="github" href={sourceUrl} target="_blank" />}
+        </Links>
+      </Footer>
     </ProjectCardW>
   );
 }

@@ -9,7 +9,7 @@ const IconLoaderW = styled.div<{ isMounted: boolean }>`
   height: 100vh;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndex.iconLoader};
-  background-color: ${({ theme }) => theme.colors.darkAqua};
+  background-color: ${({ theme }) => theme.colors.darkBg};
   position: fixed;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@ const IconLoaderW = styled.div<{ isMounted: boolean }>`
   svg {
     width: 80px;
     height: 80px;
-    color: ${({ theme }) => theme.colors.violet};
+    color: ${({ theme }) => theme.colors.main};
     display: block;
     margin: 0 auto;
     fill: none;
@@ -42,7 +42,7 @@ export function IconLoader(): ReactElement {
       .add({
         targets: '#logo path',
         delay: 100,
-        duration: 1500,
+        duration: 1200,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })

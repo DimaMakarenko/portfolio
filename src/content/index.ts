@@ -16,6 +16,15 @@ export const technologies = [
 
 export const jobs: Jobs = [
   {
+    companyName: 'SoftServe',
+    companyUrl: 'https://www.softserveinc.com/uk-ua',
+    period: { start: 'MAR 2022', end: 'Present' },
+    projectRole: 'WebUI Engineer',
+    responsibilities:
+      'Coding, code review, update architecture and implementation of, helped team members new functionality',
+    technologies: [Technologies.JavaScript, Technologies.React, Technologies.Unit],
+  },
+  {
     companyName: 'Yalantis',
     companyUrl: 'https://yalantis.com/',
     period: { start: 'APR 2021', end: 'FEB 2022' },
@@ -55,7 +64,7 @@ export const jobs: Jobs = [
       'Worked on two projects from start to finish. On one project, I was engaged in support and implementation of new functionality',
   },
   {
-    companyName: 'Brocoders (RN)',
+    companyName: 'Brocoders',
     companyUrl: 'https://brocoders.com/',
     period: { start: 'APR 2020', end: 'NOV 2020' },
     projectRole: 'React-Native developer',

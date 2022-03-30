@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 
 import { icons } from 'assets/icons';
 import { Link, Navbar, LinkElement } from 'components';
-import { config } from 'config';
 import { useScrollDirection } from 'hooks';
 import { hexToRgb } from 'utils';
 
@@ -14,10 +13,14 @@ const HeaderW = styled.header<{ isHide: boolean }>`
   width: 100%;
   padding: 0 50px;
   align-items: center;
-  background-color: rgba(${({ theme }) => hexToRgb(theme.colors.aqua)}, 0.9);
+  background-color: rgba(${({ theme }) => hexToRgb(theme.colors.bg)}, 0.9);
   z-index: ${({ theme }) => theme.zIndex.header};
   transition: ${({ theme }) => theme.transition};
   transform: translateY(${({ isHide }) => (isHide ? '-80px' : '0px')});
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    padding: 10px;
+  }
 `;
 
 const Menu = styled.div`
@@ -29,18 +32,23 @@ const Menu = styled.div`
     padding: 5px 10px;
     height: min-content;
     font-size: 15px;
+
+    @media ${({ theme }) => theme.devices.tablet} {
+      margin-left: 0;
+    }
   }
 `;
+
 const Logo = styled.div`
   ${LinkElement} {
     padding: 10px;
   }
   svg {
-    stroke: ${({ theme }) => theme.colors.violet};
+    stroke: ${({ theme }) => theme.colors.main};
     width: 40px;
     height: 40px;
     display: block;
-    color: ${({ theme }) => theme.colors.violet};
+    color: ${({ theme }) => theme.colors.main};
   }
 `;
 
@@ -56,9 +64,6 @@ export function Header(): ReactElement {
       </Logo>
       <Menu>
         <Navbar />
-        <Link variant="button" href={config.docResume} target="_blank">
-          Resume
-        </Link>
       </Menu>
     </HeaderW>
   );
