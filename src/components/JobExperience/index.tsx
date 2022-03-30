@@ -10,6 +10,7 @@ const Title = styled.p`
   display: flex;
   font-weight: 500;
   font-size: 22px;
+  flex-wrap: wrap;
 
   @media ${({ theme }) => theme.devices.tablet} {
     font-size: 18px;
@@ -89,30 +90,38 @@ export function JobExperience({
       <Period className="code">
         {period.start} - {period.end}
       </Period>
-      <Block>
-        <BlockHeader>
-          <span>Projects</span>
-        </BlockHeader>
-        <span className="code">{description}</span>
-      </Block>
+      {description && (
+        <Block>
+          <BlockHeader>
+            <span>Projects</span>
+          </BlockHeader>
+          <span className="code">{description}</span>
+        </Block>
+      )}
+
       <Block>
         <BlockHeader>
           <span>Technologies</span>
         </BlockHeader>
         <span className="code">{listToCommaSeparated(technologies)}</span>
       </Block>
-      <Block>
-        <BlockHeader>
-          <span>Responsibilities</span>
-        </BlockHeader>
-        <span className="code">{responsibilities}</span>
-      </Block>
-      <Block>
-        <BlockHeader>
-          <span>Teams Size</span>
-        </BlockHeader>
-        <span className="code">{projectTeamSize}</span>
-      </Block>
+      {responsibilities && (
+        <Block>
+          <BlockHeader>
+            <span>Responsibilities</span>
+          </BlockHeader>
+          <span className="code">{responsibilities}</span>
+        </Block>
+      )}
+
+      {projectTeamSize && (
+        <Block>
+          <BlockHeader>
+            <span>Teams Size</span>
+          </BlockHeader>
+          <span className="code">{projectTeamSize}</span>
+        </Block>
+      )}
     </div>
   );
 }
