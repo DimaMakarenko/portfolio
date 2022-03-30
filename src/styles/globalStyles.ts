@@ -31,6 +31,8 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border: 0px;
     border-radius: 0px;
     cursor: pointer;
+    outline: none;
+    background-color: transparent;
   }
   a {
     text-decoration: none ;

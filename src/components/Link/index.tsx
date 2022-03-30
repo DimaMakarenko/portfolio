@@ -82,6 +82,9 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
             svg {
               stroke: ${({ theme }) => theme.colors.main};
             }
+            @media ${({ theme }) => theme.devices.tablet} {
+              transform: none;
+            }
           }
         `;
       case 'basic':

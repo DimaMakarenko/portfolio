@@ -20,8 +20,7 @@ const Main = styled.main`
 export function App(): ReactElement {
   return (
     <div>
-      {/* TODO: turn on loader */}
-      {/* <IconLoader /> */}
+      <IconLoader />
       <Header />
       <LeftSide />
       <RightSide />

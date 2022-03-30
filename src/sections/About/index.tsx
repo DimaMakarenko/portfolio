@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Typography, List, Section, TypographyElement } from 'components';
+import { Typography, List, Section, TypographyElement, Link, LinkElement } from 'components';
+import { config } from 'config';
 import { technologies } from 'content';
 import { theme } from 'styles';
 import { NavLinkNames } from 'types';
@@ -17,6 +18,12 @@ const Description = styled(TypographyElement)`
     font-size: 16px;
     text-align: justify;
   }
+`;
+
+const LinkW = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0;
 `;
 
 export const About = (): ReactElement => {
@@ -48,6 +55,11 @@ export const About = (): ReactElement => {
         example, used Firebase as database and back-end. Attended various conferences and read
         technical literature. Helped a trainee with test task and was mentor for him.
       </Description>
+      <LinkW>
+        <Link variant="button" href={config.docResume}>
+          Resume
+        </Link>
+      </LinkW>
     </Section>
   );
 };

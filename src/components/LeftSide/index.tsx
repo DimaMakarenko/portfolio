@@ -1,17 +1,18 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Side, Link } from 'components';
-import { socialLinks } from 'content';
+import { Side, SocialLinks } from 'components';
+import { SocialLinksW } from 'components/SocialLinks';
 
-const LeftSideW = styled.ul`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+const LeftSideW = styled.div`
+  ${SocialLinksW} {
+    align-items: center;
+    flex-direction: column;
 
-  li {
-    &:last-of-type {
-      margin-bottom: 20px;
+    li {
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
     }
   }
 `;
@@ -20,11 +21,7 @@ export const LeftSide = (): ReactElement => {
   return (
     <Side>
       <LeftSideW>
-        {socialLinks.map(({ url, iconName }) => (
-          <li key={url}>
-            <Link href={url} iconName={iconName} />
-          </li>
-        ))}
+        <SocialLinks />
       </LeftSideW>
     </Side>
   );

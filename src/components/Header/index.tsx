@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 
 import { icons } from 'assets/icons';
 import { Link, Navbar, LinkElement } from 'components';
-import { config } from 'config';
 import { useScrollDirection } from 'hooks';
 import { hexToRgb } from 'utils';
 
@@ -18,6 +17,10 @@ const HeaderW = styled.header<{ isHide: boolean }>`
   z-index: ${({ theme }) => theme.zIndex.header};
   transition: ${({ theme }) => theme.transition};
   transform: translateY(${({ isHide }) => (isHide ? '-80px' : '0px')});
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    padding: 10px;
+  }
 `;
 
 const Menu = styled.div`
@@ -29,8 +32,13 @@ const Menu = styled.div`
     padding: 5px 10px;
     height: min-content;
     font-size: 15px;
+
+    @media ${({ theme }) => theme.devices.tablet} {
+      margin-left: 0;
+    }
   }
 `;
+
 const Logo = styled.div`
   ${LinkElement} {
     padding: 10px;

@@ -42,7 +42,7 @@ export function IconLoader(): ReactElement {
       .add({
         targets: '#logo path',
         delay: 100,
-        duration: 1500,
+        duration: 1200,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })

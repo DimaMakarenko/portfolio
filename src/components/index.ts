@@ -13,3 +13,4 @@ export * from './Footer';
 export * from './Code';
 export * from './Section';
 export * from './RightSide';
+export * from './SocialLinks';

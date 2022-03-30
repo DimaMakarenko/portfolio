@@ -12,6 +12,7 @@ export const theme = {
   },
   transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
   zIndex: {
+    blur: 1,
     side: 10,
     header: 11,
     iconLoader: 15,

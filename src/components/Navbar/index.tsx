@@ -1,6 +1,8 @@
 import { ReactElement, useEffect, useState } from 'react';
 import styled, { css } from 'styled-components/macro';
 
+import { SocialLinks } from 'components';
+import { SocialLinksW } from 'components/SocialLinks';
 import { navLinks } from 'content';
 import { useScrollToElementById } from 'hooks';
 
@@ -20,26 +22,53 @@ const Menu = styled.ul`
   align-items: center;
 `;
 
+const BlurW = styled.div<{ isMenuOpen: boolean }>`
+  display: ${({ isMenuOpen }) => (isMenuOpen ? 'inline' : 'none')};
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  z-index: ${({ theme }) => theme.zIndex.blur};
+`;
+
 const NavbarW = styled.div<{ isMenuOpen: boolean }>`
   display: flex;
+  z-index: ${({ theme }) => theme.zIndex.header};
+
+  ${SocialLinksW} {
+    display: none;
+  }
+
   ${({ isMenuOpen }) => {
     if (isMenuOpen) {
       return css`
         position: absolute;
         right: 0;
         top: 0;
-        width: 70vw;
+        width: 60vw;
         height: 100vh;
         background-color: ${({ theme }) => theme.colors.darkBg};
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         ${MenuW} {
           display: flex;
         }
         ${Menu} {
           align-items: center;
           flex-direction: column;
+        }
+        ${SocialLinksW} {
+          display: flex;
+          position: absolute;
+          bottom: 30px;
+          li {
+            padding: 10px;
+          }
         }
       `;
     }
@@ -51,8 +80,9 @@ const MenuItem = styled.li`
   margin: 0px 5px;
 
   @media ${({ theme }) => theme.devices.tablet} {
-    font-size: 20px;
-    margin: 15px 0;
+    font-size: 22px;
+    margin: 20px 0;
+    letter-spacing: 1.1;
   }
 `;
 
@@ -66,7 +96,7 @@ const BurgerBox = styled.span`
   width: 30px;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 6px;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -98,7 +128,7 @@ const MenuBurger = styled.button<{ isMenuOpen: boolean }>`
     content: '';
     display: block;
     position: absolute;
-    right: 0;
+    right: 6px;
     height: 3px;
     background-color: ${({ theme }) => theme.colors.main};
     transition-timing-function: ease;
@@ -123,17 +153,20 @@ const MenuBurger = styled.button<{ isMenuOpen: boolean }>`
 `;
 
 export function Navbar(): ReactElement {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const { handleScroll } = useScrollToElementById();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  const handleLinkClick = (id: string) => {
-    handleScroll(id);
+  const handleCloseMenu = () => {
     setIsMenuOpen(false);
     document.body.classList.remove('blur');
+  };
+  const handleLinkClick = (id: string) => {
+    handleScroll(id);
+    handleCloseMenu();
   };
 
   useEffect(() => {
@@ -141,21 +174,25 @@ export function Navbar(): ReactElement {
   }, [isMenuOpen]);
 
   return (
-    <NavbarW isMenuOpen={isMenuOpen}>
-      <MenuW>
-        <Menu>
-          {navLinks.map(({ title, url, id }) => (
-            <MenuItem key={id}>
-              <Link href={url} onClick={() => handleLinkClick(id)}>
-                {title}
-              </Link>
-            </MenuItem>
-          ))}
-        </Menu>
-      </MenuW>
-      <MenuBurger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
-        <BurgerBox></BurgerBox>
-      </MenuBurger>
-    </NavbarW>
+    <>
+      <BlurW isMenuOpen={isMenuOpen} onClick={handleCloseMenu} />
+      <NavbarW isMenuOpen={isMenuOpen}>
+        <MenuW>
+          <Menu>
+            {navLinks.map(({ title, url, id }) => (
+              <MenuItem key={id}>
+                <Link href={url} onClick={() => handleLinkClick(id)}>
+                  {title}
+                </Link>
+              </MenuItem>
+            ))}
+          </Menu>
+        </MenuW>
+        <MenuBurger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
+          <BurgerBox></BurgerBox>
+        </MenuBurger>
+        <SocialLinks />
+      </NavbarW>
+    </>
   );
 }

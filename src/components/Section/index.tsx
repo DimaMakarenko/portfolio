@@ -3,6 +3,9 @@ import styled from 'styled-components/macro';
 
 export const SectionW = styled.section`
   padding: 80px 0;
+  @media ${({ theme }) => theme.devices.tablet} {
+    padding: 40px 0;
+  }
 `;
 
 const Header = styled.h2`
