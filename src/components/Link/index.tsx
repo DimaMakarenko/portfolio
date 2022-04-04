@@ -96,8 +96,7 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
 export function Link({ variant = 'link', iconName, children, ...otherProps }: LinkProps) {
   return (
     <LinkElement {...otherProps} variant={iconName ? 'icon' : variant}>
-      {children}
-      {iconName && icons[iconName]}
+      {iconName ? icons[iconName] : children}
     </LinkElement>
   );
 }

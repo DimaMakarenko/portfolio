@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 
 export const CodeW = styled.code`
   position: relative;
-  display: inline;
+  display: inline-block;
   font-family: 'Inconsolata', monospace;
   font-size: 0.9em;
   padding: 6px 8px;
