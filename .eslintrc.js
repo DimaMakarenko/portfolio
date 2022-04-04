@@ -1,8 +1,11 @@
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser for typescript
+  parser: '@typescript-eslint/parser',
+  // Specifies the ESLint parser for typescript
   parserOptions: {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
+    ecmaVersion: 2020,
+    // Allows for the parsing of modern ECMAScript features
+    sourceType: 'module',
+    // Allows for the use of imports
     ecmaFeatures: {
       jsx: true, // Allows for the parsing of JSX
     },
@@ -22,18 +25,19 @@ module.exports = {
   },
   plugins: ['jest', 'testing-library', 'import'],
   extends: [
-    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from @typescript-eslint/eslint-plugin
-    'plugin:import/errors', // Uses the recommended rules from eslint-plugin-import
-    'plugin:import/warnings', // Uses the recommended rules from eslint-plugin-import
-    'plugin:import/typescript', // This line needed to work with typescript
-    'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
-    'plugin:react-hooks/recommended', // Uses the recommended rules from eslint-plugin-react-hooks
-    'plugin:jsx-a11y/recommended', // Uses the recommended rules from eslint-plugin-jsx-a11y
-    'plugin:jest/recommended', // Uses the recommended rules from eslint-plugin-jest
-    'plugin:jest/style', // Uses the recommended style rules from eslint-plugin-jest
-    'plugin:jest-dom/recommended', // Uses the recommended rules from eslint-plugin-jest-dom
-    'plugin:testing-library/react', // Uses the recommended style rules from eslint-plugin-testing-library for React
-    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   rules: {
     '@typescript-eslint/naming-convention': [
@@ -42,10 +46,14 @@ module.exports = {
         selector: 'interface',
         format: ['PascalCase'],
       },
-    ], // forbids naming interfaces in lower case
-    'react/jsx-uses-react': 'off', // off because New JSX Transform - https://uk.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
-    'react/react-in-jsx-scope': 'off', // off because New JSX Transform
-    '@typescript-eslint/no-unused-vars': 'off', // off because tsconfig have noUnusedLocals, noUnusedParameters
+    ],
+    // forbids naming interfaces in lower case
+    'react/jsx-uses-react': 'off',
+    // off because New JSX Transform - https://uk.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+    'react/react-in-jsx-scope': 'off',
+    // off because New JSX Transform
+    '@typescript-eslint/no-unused-vars': 'off',
+    // off because tsconfig have noUnusedLocals, noUnusedParameters
     'import/order': [
       'error',
       {
@@ -63,14 +71,23 @@ module.exports = {
           caseInsensitive: true,
         },
       },
-    ], // configure import order, import from react always first
-    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }], // disallow unnecessary curly braces in JSX props and/or children
+    ],
+    // configure import order, import from react always first
+    'react/jsx-curly-brace-presence': [
+      'error',
+      {
+        props: 'never',
+        children: 'never',
+      },
+    ],
+    // disallow unnecessary curly braces in JSX props and/or children
     'jest/expect-expect': [
       'error',
       {
         assertFunctionNames: ['expect', 'cy'],
       },
-    ], // configure asserts for cypress and jest
+    ],
+    // configure asserts for cypress and jest
     'no-restricted-imports': [
       'error',
       {
