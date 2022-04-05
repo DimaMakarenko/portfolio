@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <img alt="Logo" src="./src/assets/images/main.png" />
+  <img alt="Logo" src="./src/assets/images/main.PNG" />
 </p>
 
 # Getting Started
