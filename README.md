@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+<div align="center">
+  <img alt="Logo" src="./src/assets/icons/logo.svg" width="100" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="Logo" src="./src/assets/images/main.png" />
+</p>
 
-## Available Scripts
+# Getting Started
 
-In the project directory, you can run:
+It is recommended that you work through the Storybook guides in the order they appear in the navigation panel on the left. The guides have been designed to introduce you to project in a logical order and steadily build up your knowledge as you progress through them.
 
-### `npm start`
+## 🛠 Installation & Set Up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository into your local workspace
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```sh
+   git clone https://github.com/DimaMakarenko/portfolio.git
+   ```
 
-### `npm test`
+2. Move into the project and install the dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```sh
+    cd portfolio && npm install
+    ```
+3. Start the development server
 
-### `npm run build`
+   ```sh
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧪 Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It is recommended to check [React testing library docs](https://testing-library.com/docs/react-testing-library/intro/) along with [Common mistakes with the lib](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) before jumping into testing.
+To work with test runner use following instructions:
 
-### `npm run eject`
+Run the Jest test suite:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    npm run test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📕 Storybook
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run Storybook in development mode:
 
-## Learn More
+    npm run storybook
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Building and Running for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Generate a full static production build
+
+   ```sh
+   npm run build
+   ```
