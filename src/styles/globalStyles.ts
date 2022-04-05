@@ -8,8 +8,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth; 
   }
   body {
     background-color: ${({ theme }) => theme.colors.bg};
@@ -37,7 +36,6 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   a {
     text-decoration: none ;
   }
-  
   .code {
     font-family: 'Inconsolata', monospace;
   }

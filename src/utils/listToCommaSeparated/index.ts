@@ -1,1 +1,1 @@
-export const listToCommaSeparated = (list: unknown[]) => list.join(', ');
+export const listToCommaSeparated = (list: unknown[]): string => list.join(', ');
