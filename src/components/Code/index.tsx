@@ -8,7 +8,7 @@ export const CodeW = styled.code`
   font-size: 0.9em;
   padding: 6px 8px;
   margin: 1px -1px;
-  background: #f0f0f4;
+  background-color: #f0f0f4;
   border-radius: 3px;
 `;
 

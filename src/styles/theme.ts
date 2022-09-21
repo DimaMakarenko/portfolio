@@ -1,14 +1,16 @@
+import { COLORS } from './colors';
 import { devices } from './sizes';
 
 export const theme = {
   colors: {
-    darkBg: '#D8E9F3',
-    bg: '#F4F9FC',
-    lightestNavy: '#233554',
-    text: '#0F1B61',
-    secondText: '#A088B1',
-    main: '#7F00E0',
-    lightMain: 'rgba(127, 0, 224, 0.1)',
+    darkBg: COLORS.green100,
+    bg: COLORS.white100,
+    lightBg: COLORS.white200,
+    lightestNavy: COLORS.green500,
+    text: COLORS.green600,
+    secondText: COLORS.purple300,
+    main: COLORS.purple400,
+    lightMain: COLORS.purple500,
   },
   transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
   zIndex: {

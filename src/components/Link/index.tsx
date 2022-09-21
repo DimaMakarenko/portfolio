@@ -56,6 +56,7 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
 
           &:hover {
             background-color: ${({ theme }) => theme.colors.lightMain};
+            color: ${({ theme }) => theme.colors.lightBg};
           }
 
           @media ${({ theme }) => theme.devices.laptop} {

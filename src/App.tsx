@@ -1,8 +1,18 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Header, IconLoader, Footer, LeftSide, RightSide } from 'components';
-import { Hero, About, Experience, Projects, Contact } from 'sections';
+import { IconLoader } from 'components';
+import {
+  Hero,
+  Header,
+  About,
+  Experience,
+  Projects,
+  Contact,
+  Footer,
+  LeftSide,
+  RightSide,
+} from 'sections';
 
 const Main = styled.main`
   padding: 0px 150px;

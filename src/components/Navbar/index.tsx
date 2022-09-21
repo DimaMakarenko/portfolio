@@ -89,6 +89,11 @@ const MenuItem = styled.li`
 const Link = styled.a`
   color: ${({ theme }) => theme.colors.text};
   padding: 10px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.main};
+    transition: ${({ theme }) => theme.transition};
+  }
 `;
 
 const BurgerBox = styled.span`

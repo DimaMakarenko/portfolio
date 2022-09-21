@@ -64,6 +64,7 @@ export type Project = {
   url?: string;
   sourceUrl?: string;
   technologies: Technologies[];
+  image?: string;
 };
 
 export type Projects = Project[];

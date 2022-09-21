@@ -3,3 +3,7 @@ export * from './About';
 export * from './Experience';
 export * from './Projects';
 export * from './Contact';
+export * from './LeftSide';
+export * from './Footer';
+export * from './RightSide';
+export * from './Header';
