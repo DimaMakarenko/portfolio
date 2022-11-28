@@ -5,7 +5,6 @@ import { icons, Icons } from 'assets/icons';
 
 enum LinkVariantTag {
   'link' = 'link',
-  'button' = 'button',
   'icon' = 'icon',
   'basic' = 'basic',
 }
@@ -45,22 +44,6 @@ export const LinkElement = styled.a<{ variant?: LinkVariant }>`
             &:after {
               width: 100%;
             }
-          }
-        `;
-      case 'button':
-        return css`
-          padding: 1rem 1.25rem;
-          border: 1px solid ${({ theme }) => theme.colors.main};
-          border-radius: 4px;
-          transition: ${({ theme }) => theme.transition};
-
-          &:hover {
-            background-color: ${({ theme }) => theme.colors.lightMain};
-            color: ${({ theme }) => theme.colors.lightBg};
-          }
-
-          @media ${({ theme }) => theme.devices.laptop} {
-            padding: 0.75rem 1rem;
           }
         `;
       case 'icon':

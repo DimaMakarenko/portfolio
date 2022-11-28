@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Typography, List, Section, TypographyElement, Link, LinkElement } from 'components';
+import { Typography, List, Section, TypographyElement, Link, Button } from 'components';
 import { config } from 'config';
 import { technologies } from 'content';
 import { theme } from 'styles';
@@ -56,8 +56,8 @@ export const About = (): ReactElement => {
         technical literature. Helped a trainee with test task and was mentor for him.
       </Description>
       <LinkW>
-        <Link variant="button" href={config.docResume}>
-          Resume
+        <Link variant="basic" href={config.docResume}>
+          <Button>Resume</Button>
         </Link>
       </LinkW>
     </Section>

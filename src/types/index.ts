@@ -34,6 +34,7 @@ export enum Technologies {
 }
 
 export enum NavLinkNames {
+  Hero = 'Hero',
   About = 'about',
   Experience = 'experience',
   Projects = 'projects',

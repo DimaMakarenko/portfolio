@@ -2,9 +2,13 @@ import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
 import { icons } from 'assets/icons';
-import { Link, Navbar, LinkElement } from 'components';
-import { useScrollDirection } from 'hooks';
+import { Navbar, LinkElement } from 'components';
+import { useScrollDirection, useScrollToElementById } from 'hooks';
 import { hexToRgb } from 'utils';
+
+const Link = styled.span`
+  cursor: pointer;
+`;
 
 const HeaderW = styled.header<{ isHide: boolean }>`
   position: fixed;
@@ -54,13 +58,14 @@ const Logo = styled.div`
 
 export function Header(): ReactElement {
   const { direction } = useScrollDirection();
+  const { handleScroll } = useScrollToElementById();
+
+  const handleLogoClick = () => handleScroll('hero');
 
   return (
     <HeaderW isHide={direction === 'down'}>
       <Logo>
-        <Link variant="basic" href="/portfolio/#">
-          {icons.logo}
-        </Link>
+        <Link onClick={handleLogoClick}>{icons.logo}</Link>
       </Logo>
       <Menu>
         <Navbar />

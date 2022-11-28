@@ -37,7 +37,7 @@ export const Image = styled.a`
     height: 100%;
     position: absolute;
     background-color: #eff2f4;
-    opacity: 0.5;
+    opacity: 0.3;
     transition: ${({ theme }) => theme.transition};
   }
   &:hover {
@@ -133,6 +133,7 @@ export const ProjectW = styled.li`
 
 export const Title = styled.h4`
   font-weight: 600;
+  margin-bottom: 5px;
 
   @media ${({ theme }) => theme.devices.tablet} {
     a:before {

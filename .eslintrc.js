@@ -52,7 +52,7 @@ module.exports = {
     // off because New JSX Transform - https://uk.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     'react/react-in-jsx-scope': 'off',
     // off because New JSX Transform
-    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     // off because tsconfig have noUnusedLocals, noUnusedParameters
     'import/order': [
       'error',

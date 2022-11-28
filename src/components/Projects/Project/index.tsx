@@ -17,9 +17,9 @@ export const Project = ({
     <ProjectW>
       <Content>
         <Title>
-          <a href={url || sourceUrl} target="_blank" rel="noreferrer">
+          <Link href={url || sourceUrl} target="_blank" rel="noreferrer">
             {title}
-          </a>
+          </Link>
         </Title>
         <Description>{description}</Description>
         <Technologies>

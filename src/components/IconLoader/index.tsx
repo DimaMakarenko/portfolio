@@ -30,6 +30,8 @@ const IconLoaderW = styled.div<{ isMounted: boolean }>`
   }
 `;
 
+const ANIMATION_DURATION = 2800;
+
 export function IconLoader(): ReactElement {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -63,7 +65,14 @@ export function IconLoader(): ReactElement {
   };
 
   useEffect(() => {
+    document.body.style.overflowY = 'hidden';
     animate();
+
+    const timer = setTimeout(() => {
+      document.body.style.overflowY = 'auto';
+    }, ANIMATION_DURATION);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return <IconLoaderW isMounted={isMounted}>{icons.logoLoader}</IconLoaderW>;

@@ -86,9 +86,10 @@ const MenuItem = styled.li`
   }
 `;
 
-const Link = styled.a`
+const Link = styled.span`
   color: ${({ theme }) => theme.colors.text};
   padding: 10px;
+  cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.colors.main};
@@ -184,11 +185,9 @@ export function Navbar(): ReactElement {
       <NavbarW isMenuOpen={isMenuOpen}>
         <MenuW>
           <Menu>
-            {navLinks.map(({ title, url, id }) => (
+            {navLinks.map(({ title, id }) => (
               <MenuItem key={id}>
-                <Link href={url} onClick={() => handleLinkClick(id)}>
-                  {title}
-                </Link>
+                <Link onClick={() => handleLinkClick(id)}>{title}</Link>
               </MenuItem>
             ))}
           </Menu>

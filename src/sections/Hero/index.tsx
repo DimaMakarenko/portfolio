@@ -20,7 +20,7 @@ const NameW = styled.div`
 
 export function Hero() {
   return (
-    <HeronW>
+    <HeronW id="hero">
       <Typography variant="h2">Hi, my name is</Typography>
       <NameW>
         <Typography variant="h1" color={theme.colors.text}>

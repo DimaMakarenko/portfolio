@@ -10,3 +10,5 @@ export * from './IconLoader';
 export * from './Code';
 export * from './Section';
 export * from './SocialLinks';
+export * from './Main';
+export * from './Button';

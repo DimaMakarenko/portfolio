@@ -12,7 +12,7 @@ export const theme = {
     main: COLORS.purple400,
     lightMain: COLORS.purple500,
   },
-  transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
+  transition: 'all 0.33s cubic-bezier(0.645,0.045,0.355,1)',
   zIndex: {
     blur: 1,
     side: 10,

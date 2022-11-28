@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components/macro';
 
-import { Typography, Link, SectionW } from 'components';
+import { Typography, Link, SectionW, Button } from 'components';
 import { config } from 'config';
 import { theme } from 'styles';
 import { NavLinkNames } from 'types';
@@ -31,8 +31,8 @@ export function Contact(): ReactElement {
           back to you!
         </Typography>
       </DescriptionW>
-      <Link href={config.socials.gmail} variant="button">
-        Say Hello
+      <Link href={config.socials.gmail} variant="basic">
+        <Button>Say Hello</Button>
       </Link>
     </ContactW>
   );
