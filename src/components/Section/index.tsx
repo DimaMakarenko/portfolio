@@ -12,16 +12,18 @@ const Header = styled.h2`
   position: relative;
   color: ${({ theme }) => theme.colors.secondText};
   width: 100%;
-  white-space: nowrap;
   display: flex;
   align-items: center;
   font-weight: 600;
   font-size: 34px;
+  line-height: 40px;
   margin: 10px 0 60px;
   justify-content: center;
+  text-align: center;
 
   @media ${({ theme }) => theme.devices.tablet} {
     font-size: 28px;
+    line-height: 30px;
     margin: 10px 0 40px;
   }
 `;

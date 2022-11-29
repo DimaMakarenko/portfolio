@@ -61,7 +61,7 @@ export function Header(): ReactElement {
   const { direction } = useScrollDirection();
   const { handleScroll } = useScrollToElementById();
 
-  const handleLogoClick = () => handleScroll('hero');
+  const handleLogoClick = () => setTimeout(() => handleScroll('hero'), 0);
 
   return (
     <HeaderW isHide={direction === 'down'}>

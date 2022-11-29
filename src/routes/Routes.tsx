@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { Routes as Switch, Route, HashRouter } from 'react-router-dom';
 
 import { MainPage, ProjectsPage } from 'pages';
-import { Header } from 'sections';
+import { Footer, Header } from 'sections';
 
 export const routes = {
   main: `/`,
@@ -18,6 +18,7 @@ export const Routes = (): ReactElement => {
         <Route path={routes.projects} element={<ProjectsPage />} />
         <Route path="*" element="" />
       </Switch>
+      <Footer />
     </HashRouter>
   );
 };

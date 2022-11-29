@@ -118,7 +118,7 @@ const MenuBurger = styled.button<{ isMenuOpen: boolean }>`
     display: block;
     height: 20px;
     width: 30px;
-    top: 20px;
+    top: 10px;
     right: 20px;
     background-color: transparent;
     position: fixed;
@@ -178,6 +178,7 @@ export function Navbar(): ReactElement {
 
   useEffect(() => {
     document.body.classList.toggle('blur', isMenuOpen);
+    document.body.style.overflowY = isMenuOpen ? 'hidden' : 'auto';
   }, [isMenuOpen]);
 
   return (
