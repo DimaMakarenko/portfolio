@@ -1,12 +1,11 @@
 import { ReactElement } from 'react';
 
 import { Main } from 'components';
-import { Hero, About, Experience, Projects, Contact, Footer, Header } from 'sections';
+import { Hero, About, Experience, Projects, Contact, Footer } from 'sections';
 
 export const MainPage = (): ReactElement => {
   return (
     <>
-      <Header />
       <Main>
         <Hero />
         <About />

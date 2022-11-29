@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
 import { icons } from 'assets/icons';
@@ -65,7 +66,9 @@ export function Header(): ReactElement {
   return (
     <HeaderW isHide={direction === 'down'}>
       <Logo>
-        <Link onClick={handleLogoClick}>{icons.logo}</Link>
+        <NavLink to="/">
+          <Link onClick={handleLogoClick}>{icons.logo}</Link>
+        </NavLink>
       </Logo>
       <Menu>
         <Navbar />

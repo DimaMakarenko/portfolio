@@ -1,4 +1,5 @@
 import { ReactElement, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components/macro';
 
 import { SocialLinks } from 'components';
@@ -171,8 +172,8 @@ export function Navbar(): ReactElement {
     document.body.classList.remove('blur');
   };
   const handleLinkClick = (id: string) => {
-    handleScroll(id);
     handleCloseMenu();
+    setTimeout(() => handleScroll(id), 0);
   };
 
   useEffect(() => {
@@ -185,9 +186,11 @@ export function Navbar(): ReactElement {
       <NavbarW isMenuOpen={isMenuOpen}>
         <MenuW>
           <Menu>
-            {navLinks.map(({ title, id }) => (
+            {navLinks.map(({ title, id, url }) => (
               <MenuItem key={id}>
-                <Link onClick={() => handleLinkClick(id)}>{title}</Link>
+                <NavLink to={url} onClick={() => handleLinkClick(id)}>
+                  <Link>{title}</Link>
+                </NavLink>
               </MenuItem>
             ))}
           </Menu>
