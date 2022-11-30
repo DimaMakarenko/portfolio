@@ -16,10 +16,12 @@ interface ProjectList {
 }
 
 export function ProjectList({ projects }: ProjectList): ReactElement {
+  const sortedList = projects.sort((a, b) => (b.priority || 0) - (a.priority || 0));
+
   return (
     <ProjectListW>
       <ul>
-        {projects.map((project, index) => (
+        {sortedList.map((project, index) => (
           <Project key={index} {...project} />
         ))}
       </ul>

@@ -14,6 +14,9 @@ export enum Technologies {
   Cypress = 'Cypress',
   Unit = 'Unit/Integration tests',
   ReactHooks = 'React hooks',
+  Next = 'Next.js',
+  Angular = 'Angular',
+  TreeJS = 'tree.js',
   // Markup skills
   Css = 'CSS',
   HTML = 'HTML',
@@ -66,6 +69,7 @@ export type Project = {
   sourceUrl?: string;
   technologies: Technologies[];
   image?: string;
+  priority?: number;
 };
 
 export type Projects = Project[];
