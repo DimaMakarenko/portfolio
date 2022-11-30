@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
 import { icons } from 'assets/icons';
@@ -60,12 +61,14 @@ export function Header(): ReactElement {
   const { direction } = useScrollDirection();
   const { handleScroll } = useScrollToElementById();
 
-  const handleLogoClick = () => handleScroll('hero');
+  const handleLogoClick = () => setTimeout(() => handleScroll('hero'), 0);
 
   return (
     <HeaderW isHide={direction === 'down'}>
       <Logo>
-        <Link onClick={handleLogoClick}>{icons.logo}</Link>
+        <NavLink to="/">
+          <Link onClick={handleLogoClick}>{icons.logo}</Link>
+        </NavLink>
       </Logo>
       <Menu>
         <Navbar />

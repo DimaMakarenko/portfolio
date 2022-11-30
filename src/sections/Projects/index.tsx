@@ -14,9 +14,11 @@ const ButtonW = styled.div`
 `;
 
 export function Projects(): ReactElement {
+  const shortProjectList = projects.slice(0, 5);
+
   return (
     <Section id={NavLinkNames.Projects} title="Some projects">
-      <ProjectList projects={projects} />
+      <ProjectList projects={shortProjectList} />
       <ButtonW>
         <NavLink to={routes.projects}>
           <Button>More Projects</Button>

@@ -1,4 +1,5 @@
 import { ReactElement, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components/macro';
 
 import { SocialLinks } from 'components';
@@ -117,7 +118,7 @@ const MenuBurger = styled.button<{ isMenuOpen: boolean }>`
     display: block;
     height: 20px;
     width: 30px;
-    top: 20px;
+    top: 10px;
     right: 20px;
     background-color: transparent;
     position: fixed;
@@ -171,12 +172,13 @@ export function Navbar(): ReactElement {
     document.body.classList.remove('blur');
   };
   const handleLinkClick = (id: string) => {
-    handleScroll(id);
     handleCloseMenu();
+    setTimeout(() => handleScroll(id), 0);
   };
 
   useEffect(() => {
     document.body.classList.toggle('blur', isMenuOpen);
+    document.body.style.overflowY = isMenuOpen ? 'hidden' : 'auto';
   }, [isMenuOpen]);
 
   return (
@@ -185,9 +187,11 @@ export function Navbar(): ReactElement {
       <NavbarW isMenuOpen={isMenuOpen}>
         <MenuW>
           <Menu>
-            {navLinks.map(({ title, id }) => (
+            {navLinks.map(({ title, id, url }) => (
               <MenuItem key={id}>
-                <Link onClick={() => handleLinkClick(id)}>{title}</Link>
+                <NavLink to={url} onClick={() => handleLinkClick(id)}>
+                  <Link>{title}</Link>
+                </NavLink>
               </MenuItem>
             ))}
           </Menu>

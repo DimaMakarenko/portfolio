@@ -1,3 +1,4 @@
+import { images } from 'assets';
 import { config } from 'config';
 import { Jobs, NavLink, NavLinkNames, Projects, SocialLink, Technologies } from 'types';
 
@@ -93,11 +94,48 @@ export const jobs: Jobs = [
 
 export const projects: Projects = [
   {
+    title: 'Particles background',
+    description: 'Training project on "Three.js" to implement the basic behavior of the library.',
+    technologies: [Technologies.TreeJS, Technologies.JavaScript, Technologies.Css],
+    sourceUrl: 'https://github.com/DimaMakarenko/particles-bg',
+    url: 'https://dimamakarenko.github.io/particles-bg/',
+    image: images.particlesBg,
+    priority: 2,
+  },
+  {
+    title: 'Canvas Pixels Physics',
+    description: 'Training project on "Three.js" to implement the basic behavior of the library.',
+    technologies: [Technologies.TreeJS, Technologies.JavaScript, Technologies.Css],
+    sourceUrl: 'https://github.com/DimaMakarenko/Canvas-Pixels-Physics',
+    url: 'https://dimamakarenko.github.io/Canvas-Pixels-Physics/',
+    image: images.canvasPixelsPhysics,
+    priority: 2,
+  },
+  {
+    title: 'Angular Course',
+    description: 'Training project on "Angular" to implement the basic behavior of the framework.',
+    technologies: [Technologies.Angular, Technologies.TypeScript],
+    sourceUrl: 'https://github.com/DimaMakarenko/angular-course',
+    image: images.angularCourse,
+    priority: 3,
+  },
+  {
     title: 'Task-tracker',
     description:
       'Application with accounts for creating tasks and tracking time statistics by day. Also have been implemented login and account settings pages. Firebase was used to store information.',
     technologies: [Technologies.TypeScript, Technologies.ReactNative, Technologies.Firebase],
     sourceUrl: 'https://github.com/DimaMakarenko/task-tracker',
+    priority: 1,
+  },
+  {
+    title: 'Next.js',
+    description:
+      'Training project on "Next.js" to implement and understand server-side rendering behavior. Post and contact pages with the ability to open an entity by id.',
+    technologies: [Technologies.TypeScript, Technologies.React, Technologies.Next],
+    sourceUrl: 'https://github.com/DimaMakarenko/next-js',
+    url: 'https://next-kotxwsif2-dimamakarenko.vercel.app/',
+    image: images.next,
+    priority: 3,
   },
   {
     title: 'Luis Landing Page',
@@ -105,6 +143,7 @@ export const projects: Projects = [
     technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
     url: 'https://dimamakarenko.github.io/Luis-landing-page/',
     sourceUrl: 'https://github.com/DimaMakarenko/Luis-landing-page',
+    image: images.luisOenrique,
   },
   {
     title: 'Go Surf',
@@ -112,20 +151,23 @@ export const projects: Projects = [
     technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
     url: 'https://dimamakarenko.github.io/go-surf/',
     sourceUrl: 'https://github.com/DimaMakarenko/go-surf',
+    image: images.goSurf,
   },
   {
     title: 'Element Landing Page',
     description: 'Layout training project',
     technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
-    url: 'https://github.com/DimaMakarenko/Element-Landing-Page',
-    sourceUrl: 'https://dimamakarenko.github.io/Element-Landing-Page/',
+    sourceUrl: 'https://github.com/DimaMakarenko/Element-Landing-Page',
+    url: 'https://dimamakarenko.github.io/Element-Landing-Page/',
+    image: images.elements,
   },
   {
     title: 'Agnecy Landing Page',
     description: 'Layout training project',
     technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
-    url: 'https://github.com/DimaMakarenko/Agnecy-landing-Page',
-    sourceUrl: 'https://dimamakarenko.github.io/Agnecy-landing-Page',
+    sourceUrl: 'https://github.com/DimaMakarenko/Agnecy-landing-Page',
+    url: 'https://dimamakarenko.github.io/Agnecy-landing-Page',
+    image: images.agnecy,
   },
   {
     title: 'Geriana Landing Page',
@@ -133,13 +175,15 @@ export const projects: Projects = [
     technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
     url: 'https://dimamakarenko.github.io/Geriana-Landing-Gulp/',
     sourceUrl: 'https://github.com/DimaMakarenko/Geriana-Landing-Gulp',
+    image: images.geriana,
   },
   {
     title: 'Lopper Landing Page',
     description: 'Layout training project',
-    technologies: [Technologies.JavaScript, Technologies.Css],
+    technologies: [Technologies.JavaScript, Technologies.Css, Technologies.React],
     url: 'https://dimamakarenko.github.io/Lopper/',
     sourceUrl: 'https://github.com/DimaMakarenko/Lopper',
+    image: images.lopper,
   },
   {
     title: 'Top Gear',
@@ -157,9 +201,10 @@ export const projects: Projects = [
   {
     title: 'Undercover Landing Page',
     description: 'Layout training project',
-    technologies: [Technologies.HTML, Technologies.Css],
+    technologies: [Technologies.HTML, Technologies.Css, Technologies.JavaScript],
     url: 'https://dimamakarenko.github.io/design/',
     sourceUrl: 'https://github.com/DimaMakarenko/design',
+    image: images.uncovered,
   },
 ];
 
@@ -171,12 +216,12 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const navLinks: NavLink[] = [
-  { title: 'About', url: `/portfolio/#${NavLinkNames.About}`, id: NavLinkNames.About },
+  { title: 'About', url: `/#${NavLinkNames.About}`, id: NavLinkNames.About },
   {
     title: 'Experience',
-    url: `/portfolio/#${NavLinkNames.Experience}`,
+    url: `/#${NavLinkNames.Experience}`,
     id: NavLinkNames.Experience,
   },
-  { title: 'Projects', url: `/portfolio/#${NavLinkNames.Projects}`, id: NavLinkNames.Projects },
-  { title: 'Contact', url: `/portfolio/#${NavLinkNames.Contact}`, id: NavLinkNames.Contact },
+  { title: 'Projects', url: `/#${NavLinkNames.Projects}`, id: NavLinkNames.Projects },
+  { title: 'Contact', url: `/#${NavLinkNames.Contact}`, id: NavLinkNames.Contact },
 ];

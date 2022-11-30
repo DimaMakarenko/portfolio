@@ -16,6 +16,7 @@ export const Content = styled.div`
     height: 100%;
     padding: 30px 25px 20px;
     z-index: 5;
+    grid-column: 1 / -1;
   }
 `;
 
@@ -40,7 +41,10 @@ export const Image = styled.a`
     opacity: 0.3;
     transition: ${({ theme }) => theme.transition};
   }
+
   &:hover {
+    z-index: 2;
+
     &:before {
       opacity: 0;
     }
@@ -56,6 +60,8 @@ export const Image = styled.a`
       height: 100%;
     }
     &:hover {
+      z-index: auto;
+
       &:before {
         opacity: 0.1;
       }
