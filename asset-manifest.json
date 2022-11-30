@@ -1,7 +1,18 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.7f2c8f50.js",
+    "main.js": "/portfolio/static/js/main.d84cd71a.js",
+    "static/media/particles-bg.gif": "/portfolio/static/media/particles-bg.eb32992938449d8aa6f7.gif",
+    "static/media/elements.png": "/portfolio/static/media/elements.8a0ae6c6828182075327.png",
+    "static/media/canvas-pixels-physics.gif": "/portfolio/static/media/canvas-pixels-physics.ae5b4cf1cfbece22c24a.gif",
+    "static/media/geriana.png": "/portfolio/static/media/geriana.ef0e0df655d10072bbbe.png",
+    "static/media/go-surf.png": "/portfolio/static/media/go-surf.3368824dd75c241915cc.png",
     "static/media/jobEmpty.jpg": "/portfolio/static/media/jobEmpty.2ab5a20f2340b130de9c.jpg",
+    "static/media/lopper.png": "/portfolio/static/media/lopper.96fa7e7608e92d1a1215.png",
+    "static/media/angular-course.png": "/portfolio/static/media/angular-course.69b7ca58f863731678e9.png",
+    "static/media/luis-oenrique.png": "/portfolio/static/media/luis-oenrique.fc6189f55e57a3471ad8.png",
+    "static/media/next.png": "/portfolio/static/media/next.310aa19c2ff9d82677e9.png",
+    "static/media/agnecy.png": "/portfolio/static/media/agnecy.76957602a21ea2600593.png",
+    "static/media/uncovered.png": "/portfolio/static/media/uncovered.1b32330eed1c67180248.png",
     "static/media/logoLoader.svg": "/portfolio/static/media/logoLoader.e9da46919f3a39a60021a27e11fdd45f.svg",
     "static/media/logo.svg": "/portfolio/static/media/logo.e13517cf4647ace6efbf875a74b54e77.svg",
     "index.html": "/portfolio/index.html",
@@ -12,9 +23,9 @@
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.ffbf1acefbb94db27f85e9dcd617442e.svg",
     "static/media/star.svg": "/portfolio/static/media/star.b2111f70cd87103c45d68c19ee3c2613.svg",
     "static/media/folder.svg": "/portfolio/static/media/folder.f4734aedb3edda948de7c60dc73fb822.svg",
-    "main.7f2c8f50.js.map": "/portfolio/static/js/main.7f2c8f50.js.map"
+    "main.d84cd71a.js.map": "/portfolio/static/js/main.d84cd71a.js.map"
   },
   "entrypoints": [
-    "static/js/main.7f2c8f50.js"
+    "static/js/main.d84cd71a.js"
   ]
 }
