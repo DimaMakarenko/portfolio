@@ -13,6 +13,7 @@ export const technologies = [
   Technologies.ReactHooks,
   Technologies.Unit,
   Technologies.ReactQuery,
+  Technologies.Next,
 ];
 
 export const jobs: Jobs = [
@@ -20,10 +21,17 @@ export const jobs: Jobs = [
     companyName: 'SoftServe',
     companyUrl: 'https://www.softserveinc.com/uk-ua',
     period: { start: 'MAR 2022', end: 'Present' },
-    projectRole: 'WebUI Engineer',
+    projectRole: 'WebUI Software Engineer',
     responsibilities:
-      'Coding, code review, update architecture and implementation of, helped team members new functionality',
-    technologies: [Technologies.JavaScript, Technologies.React, Technologies.Unit],
+      'Coding, code review, updating architecture and implementation of, proposing new functionality, demo work scope for clients, mentoring, supporting other members, tech interview, onboarding.',
+    technologies: [
+      Technologies.JavaScript,
+      Technologies.React,
+      Technologies.Unit,
+      Technologies.Storybook,
+    ],
+    description:
+      'Have a new stream of development for a big monorepo project. Realizing a few systems to one with the implementation of new features.',
   },
   {
     companyName: 'Yalantis',
@@ -31,7 +39,7 @@ export const jobs: Jobs = [
     period: { start: 'APR 2021', end: 'FEB 2022' },
     projectRole: 'React Developer',
     responsibilities:
-      'Coding, code review, update architecture and implementation of, helped team members new functionality',
+      'Coding, code review, update architecture and implementation of, help team members with new functionality, team leading.',
     technologies: [
       Technologies.JavaScript,
       Technologies.React,
@@ -43,14 +51,15 @@ export const jobs: Jobs = [
       Technologies.StylesComponent,
     ],
     projectTeamSize: '20+ team members',
-    description: 'Admin panel for managing accounts',
+    description: 'Mobile banking account control panel.',
   },
   {
     companyName: 'Brocoders',
     companyUrl: 'https://brocoders.com/',
     period: { start: 'DEC 2019', end: 'APR 2021' },
     projectRole: 'Front-end developer',
-    responsibilities: 'Application creation, architecture setup, choice of technology stack',
+    responsibilities:
+      'Coding, Full development life cycle (Estimating, Application creation, architecture setup).',
     technologies: [
       Technologies.HTML,
       Technologies.Css,
@@ -62,7 +71,7 @@ export const jobs: Jobs = [
     ],
     projectTeamSize: 'from 2 to 10 team members',
     description:
-      'Worked on two projects from start to finish. On one project, I was engaged in support and implementation of new functionality',
+      'Worked on many projects. Dependent on project has different task and responsibility.',
   },
   {
     companyName: 'Brocoders',
@@ -70,7 +79,7 @@ export const jobs: Jobs = [
     period: { start: 'APR 2020', end: 'NOV 2020' },
     projectRole: 'React-Native developer',
     responsibilities:
-      'React-native coding, js coding, create architecture and implementation of new functionality',
+      'React-native coding, creating architecture and implementation of new functionality.',
     technologies: [
       Technologies.JavaScript,
       Technologies.ReactNative,
@@ -79,16 +88,17 @@ export const jobs: Jobs = [
       Technologies.TypeScript,
     ],
     projectTeamSize: '6 team members',
-    description: 'The app is similar to instagram with personal account, post feed',
+    description:
+      'Mobile app for Android and IOS devices. Full development life cycle. The app is like Instagram with personal account, post feed, likes, ect.',
   },
   {
     companyName: 'Freelance',
     period: { start: 'SEP 2019', end: 'DEC 2019' },
     projectRole: 'Front-end developer',
-    responsibilities: 'Create landing page',
+    responsibilities:
+      'Created simple landing pages with animation and little dynamic behavior via JS. Worked in general for Ukrainian customers.',
     technologies: [Technologies.HTML, Technologies.Css, Technologies.Webpack],
     projectTeamSize: '1 person',
-    description: 'Create landing pages with animation from layout',
   },
 ];
 
