@@ -40,9 +40,9 @@ export const About = (): ReactElement => {
       <Description>
         I have been working as a front-end developer since 2019. Worked on architecture and project
         setup. Created SPA applications, applications with flexible design and animations, and
-        supported existing ones. I like programming and I&apos;m interested in developing in this
-        direction. I try to write good projects that are easy to understand and scale. I&apos;m
-        professional and responsible for the work I do.
+        supported existing ones. I am very passionate about technology, especially enjoying the
+        advances in programming and development in this filed. I follow development principles, keep
+        the code clear, understandable and flexible to implement new features.
       </Description>
       <Typography variant="sub-title" color={theme.colors.text}>
         Additional Accomplishments

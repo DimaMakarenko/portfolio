@@ -89,14 +89,13 @@ export const jobs: Jobs = [
     ],
     projectTeamSize: '6 team members',
     description:
-      'Mobile app for Android and IOS devices. Full development life cycle. The app is like Instagram with personal account, post feed, likes, ect.',
+      'Mobile app for Android and IOS devices. Full development life cycle. The app is like Instagram with personal account, post feed, likes, etc.',
   },
   {
     companyName: 'Freelance',
     period: { start: 'SEP 2019', end: 'DEC 2019' },
     projectRole: 'Front-end developer',
-    responsibilities:
-      'Created simple landing pages with animation and little dynamic behavior via JS. Worked in general for Ukrainian customers.',
+    responsibilities: `I've created landing pages with a dynamic animation state will be load as the users scroll through the page via JS. In general, I worked for Ukrainian customers.`,
     technologies: [Technologies.HTML, Technologies.Css, Technologies.Webpack],
     projectTeamSize: '1 person',
   },
